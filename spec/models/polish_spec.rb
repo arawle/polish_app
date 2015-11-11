@@ -27,12 +27,6 @@ RSpec.describe Polish, type: :model do
     polish = Polish.create
     expect(polish).to respond_to :releaseYear
   end
-  describe '#releaseYear' do
-    it 'can not be blank' do
-      invalid_releaseYear = Polish.create(releaseYear:"")
-      expect(invalid_releaseYear).to_not be_valid
-    end
-  end
 
   it 'responds to name' do
     polish = Polish.create
