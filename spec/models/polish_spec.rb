@@ -49,12 +49,6 @@ RSpec.describe Polish, type: :model do
     polish = Polish.create
     expect(polish).to respond_to :code
   end
-  describe '#code' do
-    it 'can not be blank' do
-      invalid_code = Polish.create(code:"")
-      expect(invalid_code).to_not be_valid
-    end
-  end
 
   it 'responds to finish' do
     polish = Polish.create
