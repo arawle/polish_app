@@ -1,5 +1,5 @@
 class PolishesController < ApplicationController
-  before_action :set_contact, only: [:show, :update, :destroy]
+  before_action :set_polish, only: [:show, :update, :destroy]
 
   #GET /polishes
   def index
