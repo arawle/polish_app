@@ -41,6 +41,8 @@ group :development, :test do
   gem 'shoulda-matchers'
   #capybara for simulating real world user
   gem 'capybara'
+  #factory girl for testing apis
+  gem 'factory_girl'
 end
 
 group :development do
