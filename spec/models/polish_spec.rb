@@ -36,4 +36,6 @@ RSpec.describe Polish, type: :model do
     subject(:invalid_color) {Polish.create(color:"")}
     it { is_expected.to_not be_valid}
   end
+  #photo
+  it { is_expected.to respond_to :photo}
 end
