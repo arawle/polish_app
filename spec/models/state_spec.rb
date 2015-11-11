@@ -45,4 +45,16 @@ RSpec.describe State, type: :model do
     subject(:invalid_original_owner) {State.create(original_owner:"")}
     it { is_expected.to_not be_valid}
   end
+  #for sale
+  it { is_expected.to respond_to :for_sale }
+  describe '#for_sale' do
+    subject(:invalid_for_sale) {State.create(for_sale:"")}
+    it { is_expected.to_not be_valid}
+  end
+  #for swap
+  it { is_expected.to respond_to :for_swap}
+  describe '#for_sale' do
+    subject(:invalid_for_swap) {State.create(for_swap:"")}
+    it { is_expected.to_not be_valid}
+  end
 end
