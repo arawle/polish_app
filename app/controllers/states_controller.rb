@@ -1,7 +1,6 @@
 class StatesController < ApplicationController
   before_action :set_state, only: [:show, :update, :destroy]
 
-
   def create
     @polish = Polish.find(params[:polish_id])
     @state = State.new(state_params)
