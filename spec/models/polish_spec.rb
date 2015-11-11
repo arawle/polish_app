@@ -1,68 +1,37 @@
 require 'rails_helper'
 
 RSpec.describe Polish, type: :model do
-  it 'responds to brand' do
-    polish = Polish.create
-    expect(polish).to respond_to :brand
-  end
+  it { is_expected.to respond_to :brand}
   describe '#brand' do
-    it 'can not be blank' do
-      invalid_brand = Polish.create(brand:"")
-      expect(invalid_brand).to_not be_valid
-    end
+    subject(:invalid_brand) {Polish.create(brand:"")}
+    it { is_expected.to_not be_valid}
   end
 
-  it 'responds to collection' do
-    polish = Polish.create
-    expect(polish).to respond_to :collection
-  end
+  it { is_expected.to respond_to :collection}
   describe '#collection' do
-    it 'can not be blank' do
-      invalid_collection = Polish.create(collection:"")
-      expect(invalid_collection).to_not be_valid
-    end
+    subject(:invalid_collection) {Polish.create(collection:"")}
+    it { is_expected.to_not be_valid}
   end
 
-  it 'responds to release year' do
-    polish = Polish.create
-    expect(polish).to respond_to :releaseYear
-  end
+  it { is_expected.to respond_to :releaseYear}
 
-  it 'responds to name' do
-    polish = Polish.create
-    expect(polish).to respond_to :name
-  end
+  it { is_expected.to respond_to :name}
   describe '#name' do
-    it 'can not be blank' do
-      invalid_name = Polish.create(name:"")
-      expect(invalid_name).to_not be_valid
-    end
+    subject(:invalid_name) {Polish.create(name:"")}
+    it { is_expected.to_not be_valid}
   end
 
-  it 'responds to code' do
-    polish = Polish.create
-    expect(polish).to respond_to :code
-  end
+  it { is_expected.to respond_to :code}
 
-  it 'responds to finish' do
-    polish = Polish.create
-    expect(polish).to respond_to :finish
-  end
+  it { is_expected.to respond_to :finish}
   describe '#finish' do
-    it 'can not be blank' do
-      invalid_finish = Polish.create(finish:"")
-      expect(invalid_finish).to_not be_valid
-    end
+    subject(:invalid_finish) {Polish.create(finish:"")}
+    it { is_expected.to_not be_valid}
   end
 
-  it 'responds to color' do
-    polish = Polish.create
-    expect(polish).to respond_to :color
-  end
+  it { is_expected.to respond_to :color}
   describe '#color' do
-    it 'can not be blank' do
-      invalid_color = Polish.create(color:"")
-      expect(invalid_color).to_not be_valid
-    end
+    subject(:invalid_color) {Polish.create(color:"")}
+    it { is_expected.to_not be_valid}
   end
 end
