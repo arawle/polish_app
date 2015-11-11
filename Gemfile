@@ -37,6 +37,8 @@ group :development, :test do
   gem 'byebug'
   #testing
   gem 'rspec-rails'
+  #more matchers for testing
+  gem 'shoulda-matchers'
 end
 
 group :development do
