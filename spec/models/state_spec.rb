@@ -4,13 +4,13 @@ RSpec.describe State, type: :model do
   #condition
   it { is_expected.to respond_to :condition}
   describe '#condition' do
-    subject(:invalid_condition) {Polish.create(condition:"")}
+    subject(:invalid_condition) {State.create(condition:"")}
     it { is_expected.to_not be_valid}
   end
   #swatched
   it { is_expected.to respond_to :swatched}
   describe '#swatched' do
-    subject(:invalid_swatched) {Polish.create(swatched:"")}
+    subject(:invalid_swatched) {State.create(swatched:"")}
     it { is_expected.to_not be_valid}
   end
   #blog
@@ -18,19 +18,19 @@ RSpec.describe State, type: :model do
   #fill
   it { is_expected.to respond_to :fill}
   describe '#fill' do
-    subject(:invalid_fill) {Polish.create(fill:"")}
+    subject(:invalid_fill) {State.create(fill:"")}
     it { is_expected.to_not be_valid}
   end
   #thinned
   it { is_expected.to respond_to :thinned}
   describe '#thinned' do
-    subject(:invalid_thinned) {Polish.create(thinned:"")}
+    subject(:invalid_thinned) {State.create(thinned:"")}
     it { is_expected.to_not be_valid}
   end
   #box
   it { is_expected.to respond_to :box}
   describe '#box' do
-    subject(:invalid_box) {Polish.create(box:"")}
+    subject(:invalid_box) {State.create(box:"")}
     it { is_expected.to_not be_valid}
   end
   #notes
@@ -42,7 +42,7 @@ RSpec.describe State, type: :model do
   #original_owner
   it { is_expected.to respond_to :original_owner}
   describe '#original_owner' do
-    subject(:invalid_original_owner) {Polish.create(original_owner:"")}
+    subject(:invalid_original_owner) {State.create(original_owner:"")}
     it { is_expected.to_not be_valid}
   end
 end
