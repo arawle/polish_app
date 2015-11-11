@@ -39,6 +39,8 @@ group :development, :test do
   gem 'rspec-rails'
   #more matchers for testing
   gem 'shoulda-matchers'
+  #capybara for simulating real world user
+  gem 'capybara'
 end
 
 group :development do
