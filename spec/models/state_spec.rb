@@ -57,4 +57,16 @@ RSpec.describe State, type: :model do
     subject(:invalid_for_swap) {State.create(for_swap:"")}
     it { is_expected.to_not be_valid}
   end
+  #obtained
+  it { is_expected.to respond_to :obtained }
+  describe '#obtained' do
+    subject(:invalid_obtained) {State.create(obtained:"")}
+    it { is_expected.to_not be_valid}
+  end
+  #purchase
+  it { is_expected.to respond_to :purchase_price}
+  describe '#purchase_price' do
+    subject(:invalid_purchace_price) {State.create(purchase_price:"")}
+    it { is_expected.to_not be_valid}
+  end
 end
