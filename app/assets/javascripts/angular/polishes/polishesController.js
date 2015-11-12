@@ -6,15 +6,22 @@
     .controller('polishesController', polishesController);
 
   polishesController.$inject = [
+    '$scope',
     '$location',
-    //factories
+    'PolishesFactory'
   ];
 
-  function polishesController($location){
-    var vm = this;
+  function polishesController($scope, $location, PolishesFactory){
+    $scope.allPolish = PolishesFactory.polishes;
+    $scope.polish = {}
 
     //show polishes
 
+    //add polish
+    $scope.add = function (polish){
+      console.log('test')
+      console.log(polish);
+    }
 
   }
 })();
