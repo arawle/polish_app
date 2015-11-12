@@ -11,21 +11,20 @@
     //factories
   ];
 
-  function polishesController($location, $routeParams){
+  function polishController($location, $routeParams){
     var vm = this;
     console.log(vm);
-  //show polish
+    //show polish
 
-  //add polish
+    //add polish
 
-  //edit polish(admin only)
+    //edit polish(admin only)
 
-  //delete polish(admin only)
+    //delete polish(admin only)
 
-  //go back to all polishes
+    //go back to all polishes
 
-  //go back to brand page
-
+    //go back to brand page
 
   }
 })();
