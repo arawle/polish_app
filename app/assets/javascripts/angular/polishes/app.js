@@ -10,7 +10,7 @@
 
   function configFunction($routeProvider, $locationProvider) {
     $routeProvider
-      .when('/', {
+      .when('/polishes', {
         templateUrl: 'polishes/index.html',
         controller: 'polishesController'
       })
