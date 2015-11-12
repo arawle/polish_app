@@ -1,5 +1,7 @@
-<div class="col-lg-8">
-  <h1>All Polishes</h1>
+<div class="col-lg-12">
+  <div class="row">
+    <h1>All Polishes</h1>
+  </div>
 
   Search <input type="text" ng-model="searchPolish"/>
 
@@ -44,11 +46,19 @@
   </form>
 </div>
 
-<div ng-repeat="polish in allPolishes | filter: searchPolish">
-  <div>
-  <button ng-click="show(polish)">Show</button>
-    <button ng-click="delete(polish)">Delete</button>
+<div class="row">
+  <div ng-repeat="polish in allPolishes | filter: searchPolish" >
+    <div class="col-lg-2 polish">
+      <b>{{polish.name}}</b>
+      Brand: {{polish.brand}}
+      <br/>
+      Collection: {{polish.collection}}
+      <br/>
+      Release: {{polish.releaseYear}}
+      <br/>
+      <button ng-click="show(polish)">Show</button>
+      <button ng-click="delete(polish)">Delete</button>
+    </div>
   </div>
 </div>
 
-{{allPolishes[0]}}
