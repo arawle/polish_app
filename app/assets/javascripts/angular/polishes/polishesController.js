@@ -8,10 +8,11 @@
   polishesController.$inject = [
     '$scope',
     '$location',
-    'PolishesFactory'
+    'PolishesFactory',
+    'ResourceFactory'
   ];
 
-  function polishesController($scope, $location, PolishesFactory){
+  function polishesController($scope, $location, PolishesFactory, ResourceFactory){
     $scope.allPolish = PolishesFactory.polishes;
     $scope.polish = {}
 

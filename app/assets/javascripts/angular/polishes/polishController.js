@@ -8,10 +8,11 @@
   polishController.$inject = [
     '$location',
     '$routeParams'
+    'ResourceFactory'
     //factories
   ];
 
-  function polishController($location, $routeParams){
+  function polishController($location, $routeParams, ResourceFactory){
     var vm = this;
     console.log(vm);
     //show polish
