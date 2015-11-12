@@ -1,1 +1,42 @@
-Polish Index.
+<div class="col-lg-8">
+  <h1>All Polishes</h1>
+  <button ng-click="addPolish = ! addPolish">Add Polish</button>
+  <br/>
+  <br/>
+  <form role="form" class="form-inline" ng-show="addPolish">
+    <div class="form-group">
+      <label for="brand">Brand:</label>
+      <input type="text" class="form-control" ng-model="polish.brand"/>
+    </div>
+    <div class="form-group">
+      <label for="collection">Collection:</label>
+      <input type="text" class="form-control" ng-model="polish.collection" />
+    </div>
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" class="form-control" ng-model="polish.name" />
+    </div>
+    <div class="form-group">
+      <label for="releaseYear">Release Year:</label>
+      <input type="text" class="form-control" ng-model="polish.releaseYear">
+    </div>
+    <div class="form-group">
+      <label for="code">Barcode/Stock Code:</label>
+      <input type="text" class="form-control" ng-model="polish.code"/>
+    </div>
+    <div class="form-group">
+      <label for="finish">Finish:</label>
+      <input type="text" class="form-control" ng-model="polish.finish"/>
+    </div>
+    <div class="form-group">
+      <label for="color">Color:</label>
+      <input type="text" class="form-control" ng-model="polish.color"/>
+    </div>
+    <div class="form-group">
+      <label for="photo">Photo Url:</label>
+      <input type="text" class="form-control" ng-model="polish.photo"/>
+    </div>
+    <br/>
+    <input type="submit" ng-click="add(polish); addPolish = ! addPolish"/>
+  </form>
+</div>
