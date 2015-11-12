@@ -12,7 +12,8 @@
 
   function polishesController($location){
     var vm = this;
-  //show polishes
+
+    //show polishes
 
 
   }
