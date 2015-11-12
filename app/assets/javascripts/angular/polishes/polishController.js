@@ -6,7 +6,7 @@
     .controller('polishController', polishController);
 
   polishController.$inject = [
-    '$scope'
+    '$scope',
     '$location',
     '$routeParams',
     'ResourceFactory'
