@@ -5,9 +5,12 @@
     .module('myapp')
     .factory('PolishesFactory', PolishesFactory);
 
-  PolishesFactory.$inject = ['$http'];
+  PolishesFactory.$inject = [
+    '$http',
+    '$resource'
+  ];
 
-  function PolishesFactory ($http) {
+  function PolishesFactory ($http, $resource) {
 
 
 
