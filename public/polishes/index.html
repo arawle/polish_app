@@ -3,18 +3,18 @@
     <div class="col-lg-4">
       <span class="pageHeader">All Polishes</span>
     </div>
-    <div class="col-lg-6 pageTopSmall">
+    <div class="col-lg-2 col-lg-offset-4 pageTopSmall">
       <form role="form" class="form-inline">
-        <input class="col-lg-6"type="text" ng-model="searchPolish" placeholder="Search..."/>
+        <input class="col-lg-12 form-control block" type="text" ng-model="searchPolish" placeholder="Search..."/>
       </form>
     </div>
     <div class="col-lg-2 pageTopSmall">
-      <button ng-click="addPolish = ! addPolish">Add Polish</button>
+      <button class="btn btn-default" ng-click="addPolish = ! addPolish">Add Polish</button>
     </div>
   </div>
   <br/>
   <br/>
-  <form role="form" class="form-inline" name="polishForm" ng-show="addPolish">
+  <form role="form" class="form-inline polishAddForm" name="polishForm" ng-show="addPolish">
     <div class="form-group">
       <label for="brand">Brand:</label>
       <input type="text" class="form-control" ng-model="polish.brand" required/>
@@ -48,15 +48,16 @@
       <input type="text" class="form-control" ng-model="polish.photo"/>
     </div>
     <br/>
-    <button type="submit" ng-click="add(polish); addPolish = ! addPolish"></button>
+    <button class="btn btn-default" type="submit" ng-click="add(polish); addPolish = ! addPolish">Add Polish</button>
   </form>
 </div>
 
 <div class="row placeholders">
   <div ng-repeat="polish in allPolishes | filter: searchPolish" >
     <div class="col-xs-6 col-sm-3 placeholder">
-      <img data-src="holder.js/200x200/auto/sky" class="img-responsive" alt="thumbnail">
       <h4>{{polish.name}}</h4>
+      <img data-src="holder.js/200x200/auto/sky" class="img-responsive" alt="thumbnail">
+      <br/>
       <span class="text-muted">
         Brand: {{polish.brand}}
         <br/>
@@ -65,8 +66,8 @@
         Release: {{polish.releaseYear}}
         <br/>
       </span>
-      <button ng-click="show(polish)">Show</button>
-      <button ng-click="delete(polish)">Delete</button>
+      <button class="btn btn-info btn-xs" ng-click="show(polish)">Show</button>
+      <button class="btn btn-danger btn-xs" ng-click="delete(polish)">Delete</button>
     </div>
   </div>
 </div>
