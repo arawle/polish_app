@@ -7,7 +7,7 @@
 
   polishController.$inject = [
     '$location',
-    '$routeParams'
+    '$routeParams',
     'ResourceFactory'
     //factories
   ];
