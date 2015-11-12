@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  # root to: 'statics#index'
+  root to: 'statics#index'
 
   resources :polishes,  only: [:index, :show, :create, :update, :destroy] do
     resources :states, only: [:index, :show, :create, :update, :destroy]
