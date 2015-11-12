@@ -11,11 +11,9 @@
   ];
 
   function PolishesFactory ($http, $resource) {
+    var PolishesFactory = {};
 
-
-
-
-
+    PolishesFactory.polishes = [];
 
     return PolishesFactory;
   }

@@ -13,15 +13,18 @@
   ];
 
   function polishesController($scope, $location, PolishesFactory, ResourceFactory){
-    $scope.allPolish = PolishesFactory.polishes;
+    // PolishesFactory.allPolish()
+    // $scope.allPolish = PolishesFactory.polishes;
+    $scope.allPolishes = ResourceFactory.query()
     $scope.polish = {}
 
     //show polishes
 
     //add polish
     $scope.add = function (polish){
-      console.log('test')
-      console.log(polish);
+      ResourceFactory.save(polish)
+      $scope.polish = {};
+      $scope.allPolishes = ResourceFactory.query();
     }
 
   }
