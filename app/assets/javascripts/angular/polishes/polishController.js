@@ -6,15 +6,14 @@
     .controller('polishController', polishController);
 
   polishController.$inject = [
+    '$scope'
     '$location',
     '$routeParams',
     'ResourceFactory'
     //factories
   ];
 
-  function polishController($location, $routeParams, ResourceFactory){
-    var vm = this;
-    console.log(vm);
+  function polishController($scope, $location, $routeParams, ResourceFactory){
     //show polish
 
     //add polish
