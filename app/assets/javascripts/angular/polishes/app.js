@@ -11,11 +11,11 @@
   function configFunction($routeProvider, $locationProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: '/views/polishes/index.html',
+        templateUrl: 'polishes/index.html',
         controller: 'polishesController'
       })
       .when('/polishes/:id', {
-        templateUrl: '/views/polishes/polish.html',
+        templateUrl: 'polishes/polish.html',
         controller: 'polishController'
       });
 
