@@ -13,7 +13,8 @@
 
   function polishesController($scope, $location){
 
+  //show polishes
+
+
   }
-
-
 })();
