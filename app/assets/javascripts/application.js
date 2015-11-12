@@ -12,7 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require bootstrap-sprockets
 //= require angular/lib/angular.min
 //= require_tree ./angular/lib
 //= require angular/polishes/app
