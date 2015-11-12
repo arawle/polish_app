@@ -14,7 +14,7 @@
         templateUrl: '/views/polishes/index.html',
         controller: 'polishesController'
       })
-      .when('/:id', {
+      .when('/polishes/:id', {
         templateUrl: '/views/polishes/polish.html',
         controller: 'polishController'
       });
