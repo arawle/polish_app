@@ -13,16 +13,11 @@
   ];
 
   function polishController($scope, $location, $routeParams, ResourceFactory){
-    var polishId = $routeParams.id
-    console.log(polishId)
-    ResourceFactory.get();
-    //show polish
-
-    //add polish
+    $scope.polish = ResourceFactory.get({id: $routeParams.id});
 
     //edit polish(admin only)
     $scope.editPolish = function (polish){
-      polish.$update();
+      polish.$update({id: $routeParams.id});
     };
     //delete polish(admin only)
 
