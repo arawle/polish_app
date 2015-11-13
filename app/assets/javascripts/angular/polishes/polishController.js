@@ -15,9 +15,9 @@
   function polishController($scope, $location, $routeParams, ResourceFactory){
     $scope.polish = ResourceFactory.get({id: $routeParams.id});
 
-    //edit polish(admin only)
-    $scope.editPolish = function (polish){
-      polish.$update({id: $routeParams.id});
+    //update polish(admin only)
+    $scope.updatePolish = function (polish){
+      $scope.polish.$update({id: polish.id})
     };
     //delete polish(admin only)
 
