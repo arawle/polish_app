@@ -26,5 +26,15 @@
     //go back to all polishes
 
     //go back to brand page
+
+    $scope.addState = function (id, state){
+      //add a polish state
+    };
+    $scope.editState = function (state){
+      //edit a polish state
+    };
+    $scope.deleteState = function (state){
+      //delete a polish state
+    };
   }
 })();
