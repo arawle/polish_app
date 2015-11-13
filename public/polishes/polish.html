@@ -1,3 +1,74 @@
-<div class="col-md-4">
-individual polish page
+<div class="col-lg-12">
+  <div class="row pageTopper">
+    <div class="col-lg-4">
+      <span class="pageHeader">Polish</span>
+    </div>
+    <div class="col-lg-2 col-lg-offset-4 pageTopSmall">
+      <form role="form" class="form-inline">
+        <input class="col-lg-12 form-control block" type="text" ng-model="searchPolish" placeholder="Search..."/>
+      </form>
+    </div>
+
+  </div>
+  <br/>
+  <br/>
+<!--   <form role="form" class="form-inline polishAddForm" name="polishForm" ng-show="addPolish">
+    <div class="form-group">
+      <label for="brand">Brand:</label>
+      <input type="text" class="form-control" ng-model="polish.brand" required/>
+    </div>
+    <div class="form-group">
+      <label for="collection">Collection:</label>
+      <input type="text" class="form-control" ng-model="polish.collection" />
+    </div>
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" class="form-control" ng-model="polish.name" required/>
+    </div>
+    <div class="form-group">
+      <label for="releaseYear">Release Year:</label>
+      <input type="text" class="form-control" ng-model="polish.releaseYear">
+    </div>
+    <div class="form-group">
+      <label for="code">Barcode/Stock Code:</label>
+      <input type="text" class="form-control" ng-model="polish.code"/>
+    </div>
+    <div class="form-group">
+      <label for="finish">Finish:</label>
+      <input type="text" class="form-control" ng-model="polish.finish" required/>
+    </div>
+    <div class="form-group">
+      <label for="color">Color:</label>
+      <input type="text" class="form-control" ng-model="polish.color" required/>
+    </div>
+    <div class="form-group">
+      <label for="photo">Photo Url:</label>
+      <input type="text" class="form-control" ng-model="polish.photo"/>
+    </div>
+    <br/>
+    <button class="btn btn-default" type="submit" ng-click="add(polish); addPolish = ! addPolish">Add Polish</button>
+  </form> -->
 </div>
+
+<div class="row placeholders">
+  <div ng-repeat="polish in allPolishes | filter: searchPolish" >
+    <div class="col-xs-6 col-sm-3 placeholder">
+      <h4>{{polish.name}}</h4>
+      <img data-src="holder.js/200x200/auto/sky" class="img-responsive" alt="thumbnail">
+      <br/>
+      <span class="text-muted">
+        Brand: {{polish.brand}}
+        <br/>
+        Collection: {{polish.collection}}
+        <br/>
+        Release: {{polish.releaseYear}}
+        <br/>
+      </span>
+      <button class="btn btn-info btn-xs" ng-click="show(polish)">Show</button>
+      <button class="btn btn-danger btn-xs" ng-click="delete(polish)">Delete</button>
+    </div>
+  </div>
+</div>
+
+
+

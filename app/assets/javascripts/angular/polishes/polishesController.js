@@ -25,7 +25,23 @@
       ResourceFactory.save(polish)
       $scope.polish = {};
       $scope.allPolishes = ResourceFactory.query();
-    }
+    };
 
+    $scope.show = function (polish){
+      var polishPath = '/polishes/' + polish.id;
+      $location.path(polishPath);
+    };
+
+    $scope.delete = function (polish){
+      console.log(polish)
+      ResourceFactory.delete({id: polish.id})
+      $scope.allPolishes = ResourceFactory.query();
+    };
   }
 })();
+
+
+
+
+
+
