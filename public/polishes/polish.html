@@ -56,6 +56,7 @@
       <img src="{{polish.photo}}">
     </div>
     <div class="col-lg-4">
+      <br/>
       <b>Brand: </b>{{polish.brand}}<br/>
       <b>Collection: </b>{{polish.collection}}<br/>
       <b>Name: </b>{{polish.name}}<br/>
@@ -66,6 +67,69 @@
     </div>
   </div>
 </div>
+
+<button class="btn btn-success btn-xs" ng-click="addState = ! addState">Add State</button>
+
+ <form role="form" class="form-inline stateAddForm" name="stateForm" ng-show="addState">
+    <div class="form-group">
+      <label for="condition">Condition:</label>
+      <input type="text" class="form-control" ng-model="state.brand" required/>
+    </div>
+    <div class="form-group">
+      <label for="swatched">Swatched:</label>
+      <input type="text" class="form-control" ng-model="state.swatched" />
+    </div>
+    <div class="form-group">
+      <label for="blog">Blog:</label>
+      <input type="text" class="form-control" ng-model="state.blog" required/>
+    </div>
+    <div class="form-group">
+      <label for="fill">Fill:</label>
+      <input type="text" class="form-control" ng-model="state.fill">
+    </div>
+    <div class="form-group">
+      <label for="thinned">Thinned:</label>
+      <input type="text" class="form-control" ng-model="state.thinned"/>
+    </div>
+    <div class="form-group">
+      <label for="box">Box:</label>
+      <input type="text" class="form-control" ng-model="state.box" required/>
+    </div>
+    <div class="form-group">
+      <label for="notes">Notes:</label>
+      <input type="text-box" class="form-control" ng-model="state.notes" required/>
+    </div>
+    <div class="form-group">
+      <label for="bottle_shot">Bottle Shot Url:</label>
+      <input type="text" class="form-control" ng-model="state.bottle_shot"/>
+    </div>
+    <div class="form-group">
+      <label for="mani_shot">Mani Shot Url:</label>
+      <input type="text" class="form-control" ng-model="state.mani_shot"/>
+    </div>
+    <div class="form-group">
+      <label for="original_owner">Original Owner:</label>
+      <input type="text" class="form-control" ng-model="state.original_owner"/>
+    </div>
+    <div class="form-group">
+      <label for="for_sale">For Sale:</label>
+      <input type="text" class="form-control" ng-model="state.for_sale"/>
+    </div>
+    <div class="form-group">
+      <label for="for_swap">For Swap:</label>
+      <input type="text" class="form-control" ng-model="state.for_swap"/>
+    </div>
+    <div class="form-group">
+      <label for="obtained">Obtained:</label>
+      <input type="text" class="form-control" ng-model="state.obtained"/>
+    </div>
+    <div class="form-group">
+      <label for="purchase_price">Purchase Price:</label>
+      <input type="text" class="form-control" ng-model="state.purchase_price"/>
+    </div>
+    <br/>
+    <button class="btn btn-default btn-sm" type="submit" ng-click="updatePolish(state); addState = ! addState">Submit Changes</button>
+  </form>
 
 <!-- <div class="row placeholders">
   <div ng-repeat="polish in allStates | filter: searchPolish" >
