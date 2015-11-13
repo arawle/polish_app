@@ -1,7 +1,7 @@
 <div class="col-lg-12">
   <div class="row pageTopper">
     <div class="col-lg-4">
-      <span class="pageHeader">{{polish.name}}</span>
+      <span class="pageHeader">{{polish}}</span>
     </div>
     <div class="col-lg-2 col-lg-offset-4 pageTopSmall">
       <form role="form" class="form-inline">
@@ -48,7 +48,7 @@
       <input type="text" class="form-control" ng-model="polish.photo"/>
     </div>
     <br/>
-    <button class="btn btn-default" type="submit" ng-click="edit(polish); addPolish = ! addPolish">Submit Changes</button>
+    <button class="btn btn-default" type="submit" ng-click="edit(polish); editPolish = ! editPolish">Submit Changes</button>
   </form>
 </div>
 
