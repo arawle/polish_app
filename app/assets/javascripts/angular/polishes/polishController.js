@@ -26,6 +26,5 @@
     //go back to all polishes
 
     //go back to brand page
-
   }
 })();
