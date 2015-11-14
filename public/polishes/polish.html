@@ -128,28 +128,11 @@
       <input type="text" class="form-control" ng-model="state.purchase_price"/>
     </div>
     <br/>
-    <button class="btn btn-default btn-sm" type="submit" ng-click="addState(polish.id, state); addState = ! addState">Add State</button>
+    <button class="btn btn-default btn-sm" type="submit" ng-click="addPolishState(polish.id, state); addState = ! addState">Add State</button>
   </form>
+
  {{state}}
-<!-- <div class="row placeholders">
-  <div ng-repeat="polish in allStates | filter: searchPolish" >
-    <div class="col-xs-6 col-sm-3 placeholder">
-      <h4>{{polish.name}}</h4>
-      <img data-src="holder.js/200x200/auto/sky" class="img-responsive" alt="thumbnail">
-      <br/>
-      <span class="text-muted">
-        Brand: {{polish.brand}}
-        <br/>
-        Collection: {{polish.collection}}
-        <br/>
-        Release: {{polish.releaseYear}}
-        <br/>
-      </span>
-      <button class="btn btn-info btn-xs" ng-click="show(polish)">Show</button>
-      <button class="btn btn-danger btn-xs" ng-click="delete(polish)">Delete</button>
-    </div>
-  </div>
-</div> -->
+
 
 
 

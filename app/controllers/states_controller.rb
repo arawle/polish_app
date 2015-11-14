@@ -1,19 +1,18 @@
 class StatesController < ApplicationController
-  before_action :set_state, only: [:show, :update, :destroy]
+  # before_action :set_state, only: [:show, :update, :destroy]
 
   def index
     @polish = Polish.find(params[:polish_id])
-    @states = States.all(@polish)
+
     render json: @states, status: :ok
   end
 
   def create
-    console.log('made it to create!')
+
     @polish = Polish.find(params[:polish_id])
-    @state = State.new(state_params)
+    @state = @polish.states.new state_params
     if @state.save
       render json: @state, status: :created
-      @polish.states << @state
     else
       render json: @state.errors, status: :unprocessable_entity
     end
