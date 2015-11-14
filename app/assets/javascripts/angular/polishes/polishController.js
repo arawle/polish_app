@@ -9,11 +9,15 @@
     '$scope',
     '$location',
     '$routeParams',
-    'ResourceFactory'
+    'ResourceFactory',
+    'StateResourceFactory'
   ];
 
-  function polishController($scope, $location, $routeParams, ResourceFactory){
+  function polishController($scope, $location, $routeParams, ResourceFactory, StateResourceFactory){
+    // console.log($routeParams)
     $scope.polish = ResourceFactory.get({id: $routeParams.id});
+
+    $scope.states = StateResourceFactory.get({polishes_id: $routeParams.id})
     //update polish(admin only)
     $scope.updatePolish = function (polish){
       $scope.polish.$update({id: polish.id})
@@ -28,6 +32,9 @@
     //go back to brand page
 
     $scope.addState = function (id, state){
+      console.log(id)
+      console.log(state)
+      StateResourceFactory.save({polishes_id:id, id:""})
       //add a polish state
     };
     $scope.editState = function (state){

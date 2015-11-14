@@ -1,7 +1,14 @@
 class StatesController < ApplicationController
   before_action :set_state, only: [:show, :update, :destroy]
 
+  def index
+    @polish = Polish.find(params[:polish_id])
+    @states = States.all(@polish)
+    render json: @states, status: :ok
+  end
+
   def create
+    console.log('made it to create!')
     @polish = Polish.find(params[:polish_id])
     @state = State.new(state_params)
     if @state.save
