@@ -128,9 +128,9 @@
       <input type="text" class="form-control" ng-model="state.purchase_price"/>
     </div>
     <br/>
-    <button class="btn btn-default btn-sm" type="submit" ng-click="updatePolish(state); addState = ! addState">Submit Changes</button>
+    <button class="btn btn-default btn-sm" type="submit" ng-click="addState(polish.id, state); addState = ! addState">Add State</button>
   </form>
-
+ {{state}}
 <!-- <div class="row placeholders">
   <div ng-repeat="polish in allStates | filter: searchPolish" >
     <div class="col-xs-6 col-sm-3 placeholder">
