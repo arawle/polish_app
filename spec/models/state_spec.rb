@@ -1,6 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe State, type: :model do
+  it { is_expected.to belong_to :polish }
+
   #condition
   it { is_expected.to respond_to :condition}
   describe '#condition' do
