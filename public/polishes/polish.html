@@ -80,8 +80,13 @@
       <input type="text" class="form-control" ng-model="state.swatched" />
     </div>
     <div class="form-group">
-      <label for="blog">Blog:</label>
-      <input type="text" class="form-control" ng-model="state.blog" required/>
+      <label for="blog">Blogged?</label>
+      <label>
+        <input type="radio" value="true" ng-model="state.blog" />Yes
+      </label>
+      <label>
+        <input type="radio" value="false" ng-model="state.blog" />No
+      </label>
     </div>
     <div class="form-group">
       <label for="fill">Fill:</label>
@@ -92,12 +97,17 @@
       <input type="text" class="form-control" ng-model="state.thinned"/>
     </div>
     <div class="form-group">
-      <label for="box">Box:</label>
-      <input type="text" class="form-control" ng-model="state.box" required/>
+      <label for="box">Box?</label>
+      <label>
+        <input type="radio" value="true" ng-model="state.box" />Yes
+      </label>
+      <label>
+        <input type="radio" value="false" ng-model="state.box" />No
+      </label>
     </div>
     <div class="form-group">
       <label for="notes">Notes:</label>
-      <input type="text-box" class="form-control" ng-model="state.notes" required/>
+      <input type="text-area" class="form-control" ng-model="state.notes" required/>
     </div>
     <div class="form-group">
       <label for="bottle_shot">Bottle Shot Url:</label>
@@ -108,16 +118,31 @@
       <input type="text" class="form-control" ng-model="state.mani_shot"/>
     </div>
     <div class="form-group">
-      <label for="original_owner">Original Owner:</label>
-      <input type="text" class="form-control" ng-model="state.original_owner"/>
+      <label for="original_owner">Original Owner?</label>
+      <label>
+        <input type="radio" value="true" ng-model="state.original_owner" />Yes
+      </label>
+      <label>
+        <input type="radio" value="false" ng-model="state.original_owner" />No
+      </label>
     </div>
     <div class="form-group">
-      <label for="for_sale">For Sale:</label>
-      <input type="text" class="form-control" ng-model="state.for_sale"/>
+      <label for="for_sale">For Sale?</label>
+      <label>
+        <input type="radio" value="true" ng-model="state.for_sale" />Yes
+      </label>
+      <label>
+        <input type="radio" value="false" ng-model="state.for_sale" />No
+      </label>
     </div>
     <div class="form-group">
-      <label for="for_swap">For Swap:</label>
-      <input type="text" class="form-control" ng-model="state.for_swap"/>
+      <label for="for_swap">For Swap?</label>
+      <label>
+        <input type="radio" value="true" ng-model="state.for_swap" />Yes
+      </label>
+      <label>
+        <input type="radio" value="false" ng-model="state.for_swap" />No
+      </label>
     </div>
     <div class="form-group">
       <label for="obtained">Obtained:</label>
@@ -132,7 +157,6 @@
   </form>
 
  {{state}}
-
 
 
 
