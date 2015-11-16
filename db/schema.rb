@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151112035045) do
+ActiveRecord::Schema.define(version: 20151116164844) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -47,6 +47,7 @@ ActiveRecord::Schema.define(version: 20151112035045) do
     t.boolean  "for_swap"
     t.string   "obtained"
     t.string   "purchase_price"
+    t.string   "size"
   end
 
 end
