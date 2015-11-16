@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
-
+#aws gem
+gem 'aws-sdk', '~> 2'
 #image uploading
 gem "paperclip", "~> 4.3"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
