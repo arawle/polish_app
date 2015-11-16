@@ -44,6 +44,6 @@ class PolishesController < ApplicationController
     end
 
     def polish_params
-      params.require(:polish).permit(:brand, :collection, :releaseYear, :name, :code, :finish, :color)
+      params.require(:polish).permit(:brand, :collection, :releaseYear, :name, :code, :finish, :color, :picture)
     end
 end
