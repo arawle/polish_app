@@ -19,22 +19,14 @@
     $scope.polish = {}
 
 
-    // $scope.uploadFile = function (file, errFile){
-    //   $scope.errFile = errFiles && errFiles[0];
-    //   if (file) {
-    //     file.upload = Upload.upload({
-    //       url: 'https://angular-file-upload-cors-srv.appspot.com/upload',
-    //       data: {file: file}
-    //     }).then(function (response) {
-    //       $timeout(function () {
-    //         file.result = response.data;
-    //       });
-    //     }
-    //   }
-    // };
+    $scope.uploadFile = function(file, errFile){
+      return (file)
+    }
 
     $scope.add = function (polish){
-      $scope.polish.picture = $scope.uploadFile(polish.picture);
+      polish.picture = function(polish){
+        $scope.uploadFile(polish.picture);
+      }
       ResourceFactory.save(polish)
       $scope.polish = {};
       $scope.allPolishes = ResourceFactory.query();
