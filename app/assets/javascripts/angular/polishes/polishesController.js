@@ -20,13 +20,13 @@
 
 
     $scope.uploadFile = function(file, errFile){
-      return (file)
+      console.log(file)
+
+
     }
 
     $scope.add = function (polish){
-      polish.picture = function(polish){
-        $scope.uploadFile(polish.picture);
-      }
+      polish.picture_file_name = $scope.uploadFile(polish.picture_file_name);
       ResourceFactory.save(polish)
       $scope.polish = {};
       $scope.allPolishes = ResourceFactory.query();
