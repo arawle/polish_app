@@ -6,11 +6,8 @@ class PolishesController < ApplicationController
     @polishes = Polish.all
     polishes = []
     @polishes.each do |polish|
-      medium = polish.picture.url(:medium)
-      thumb = polish.picture.url(:thumb)
+      original = polish.picture.url(:original)
       polish = polish.as_json
-      polish[:medium] = medium
-      polish[:thumb] = thumb
       polishes << polish
     end
     render json: polishes, status: :ok
