@@ -8,6 +8,7 @@ class PolishesController < ApplicationController
     @polishes.each do |polish|
       original = polish.picture.url(:original)
       polish = polish.as_json
+      polish[:original] = original
       polishes << polish
     end
     render json: polishes, status: :ok
