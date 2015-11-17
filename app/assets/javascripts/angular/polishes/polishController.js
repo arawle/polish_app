@@ -14,9 +14,7 @@
   ];
 
   function polishController($scope, $location, $routeParams, ResourceFactory, PolishFactory){
-    // console.log($routeParams)
     $scope.polish = ResourceFactory.get({id: $routeParams.id});
-
     $scope.states = PolishFactory.findStates($routeParams.id)
     //update polish(admin only)
     $scope.updatePolish = function (polish){
@@ -32,10 +30,7 @@
     //go back to brand page
 
     $scope.addPolishState = function (id, state){
-      console.log(id)
-      console.log(state)
       PolishFactory.addPolishState(id, state)
-      //add a polish state
     };
     $scope.editState = function (state){
       //edit a polish state
