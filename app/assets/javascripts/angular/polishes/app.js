@@ -18,7 +18,6 @@
         templateUrl: 'polishes/polish.html',
         controller: 'polishController'
       });
-
     $locationProvider.html5Mode(false);
   }
 

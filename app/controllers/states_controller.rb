@@ -3,6 +3,7 @@ class StatesController < ApplicationController
 
   def index
     @polish = Polish.find(params[:polish_id])
+    @states = State.all.where(polish_id: params[:polish_id])
 
     render json: @states, status: :ok
   end

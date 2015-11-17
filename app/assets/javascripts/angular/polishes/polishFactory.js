@@ -19,11 +19,13 @@
       PolishFactory.polish = [];
       $http.get(polish)
       .success(function(data){
+        console.log(data)
         PolishFactory.polish.push(data);
       })
       .error(function(data){
         console.log('Error: ' + data);
       });
+      return PolishFactory.polish;
     };
 
     PolishFactory.addPolishState = function(polishId, state){
