@@ -4,6 +4,12 @@ class PolishesController < ApplicationController
   #GET /polishes
   def index
     @polishes = Polish.all
+    polish = []
+    @polish.each do |polish|
+      medium = polish.picture.url(:medium)
+      thumb = polish.picture.url(:thumb)
+      polish = polish.as_json
+    end
     render json: @polishes, status: :ok
   end
 
