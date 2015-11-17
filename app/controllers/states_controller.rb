@@ -1,5 +1,5 @@
 class StatesController < ApplicationController
-  # before_action :set_state, only: [:show, :update, :destroy]
+  before_action :set_state, only: [:show, :update, :destroy]
 
   def index
     @polish = Polish.find(params[:polish_id])
@@ -8,9 +8,9 @@ class StatesController < ApplicationController
   end
 
   def create
-    puts params[:polish_id]
+    puts state_params
     @polish = Polish.find(params[:polish_id])
-    @state = @polish.states.new state_params
+    @state = @polish.states.new(state_params)
     if @state.save
       render json: @state, status: :created
     else
