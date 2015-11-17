@@ -8,7 +8,6 @@ class StatesController < ApplicationController
   end
 
   def create
-    puts state_params
     @polish = Polish.find(params[:polish_id])
     @state = @polish.states.new(state_params)
     if @state.save
