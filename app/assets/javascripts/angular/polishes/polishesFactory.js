@@ -17,7 +17,7 @@
 
       PolishesFactory.createWithAttachment = function(formData) {
         var deferred = $q.defer();
-        sendPayload(formData, "POST", "polish.herokuapp.com/polishes").then(function(data) {
+        sendPayload(formData, "POST", "//polish.herokuapp.com/polishes").then(function(data) {
           deferred.resolve(data);
         });
         return deferred.promise;
