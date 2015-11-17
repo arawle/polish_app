@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 #aws gem
 gem 'aws-sdk', '~> 2'
 #image uploading
-gem "paperclip", "~> 4.3"
+gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'
 # Use postgresql as the database for Active Record
