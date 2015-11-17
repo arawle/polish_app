@@ -65,7 +65,8 @@
   <div ng-repeat="polish in allPolishes | filter: searchPolish" >
     <div class="col-xs-6 col-sm-3 placeholder">
       <h4>{{polish.name}}</h4>
-      <img data-src="holder.js/200x200/auto/sky" class="img-responsive" alt="thumbnail">
+      <img data-src="{{polish.picture}}" class="img-responsive" alt="thumbnail">
+      <img data-src="{{polish.picture_file_name}}" class="img-responsive" alt="thumbnail">
       <br/>
       <span class="text-muted">
         Brand: {{polish.brand}}
