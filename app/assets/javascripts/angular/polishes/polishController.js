@@ -34,7 +34,7 @@
     $scope.addPolishState = function (id, state){
       console.log(id)
       console.log(state)
-      PolishFactory.addPolishState(parseInt(id), state)
+      PolishFactory.addPolishState(id, state)
       //add a polish state
     };
     $scope.editState = function (state){

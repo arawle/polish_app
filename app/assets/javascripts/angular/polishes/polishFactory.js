@@ -27,7 +27,7 @@
     };
 
     PolishFactory.addPolishState = function(polishId, state){
-      console.log(polishId)
+      console.log(polishId.type)
       console.log(state)
       var states = '/polishes/' + polishId + '/states'
       $http.post(states, state)
