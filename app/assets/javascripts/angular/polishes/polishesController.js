@@ -21,17 +21,16 @@
 
     $scope.uploadFile = function(file, errFile){
       Upload.upload({
-          url:'http://localhost.3000/polishes',
-          data: {file: file}
-        }).then(function (resp) {
-            console.log('Success ' + resp.config.data.file.name + 'uploaded. Response: ' + resp.data);
-        }, function (resp) {
-            console.log('Error status: ' + resp.status);
-        }, function (evt) {
-            var progressPercentage = parseInt(100.0 * evt.loaded / evt.total);
-            console.log('progress: ' + progressPercentage + '% ' + evt.config.data.file.name);
-        });
-
+        url:'http://localhost.3000/polishes',
+        data: {file: file}
+      }).then(function (resp) {
+          console.log('Success ' + resp.config.data.file.name + 'uploaded. Response: ' + resp.data);
+      }, function (resp) {
+          console.log('Error status: ' + resp.status);
+      }, function (evt) {
+          var progressPercentage = parseInt(100.0 * evt.loaded / evt.total);
+          console.log('progress: ' + progressPercentage + '% ' + evt.config.data.file.name);
+      });
     }
 
     $scope.add= function() {
@@ -42,16 +41,6 @@
       $scope.polish = {};
       $scope.allPolishes = ResourceFactory.query();
     };
-
-
-
-
-    // $scope.add = function (polish){
-    //   polish.picture_file_name = $scope.uploadFile(polish.picture_file_name);
-    //   ResourceFactory.save(polish)
-    //   $scope.polish = {};
-    //   $scope.allPolishes = ResourceFactory.query();
-    // };
 
     $scope.show = function (polish){
       var polishPath = '/polishes/' + polish.id;

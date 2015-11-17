@@ -17,13 +17,12 @@
 
       PolishesFactory.createWithAttachment = function(formData) {
         var deferred = $q.defer();
-        sendPayload(formData, "POST", "//polish.herokuapp.com/polishes").then(function(data) {
+        sendPayload(formData, "POST", "//localhost:3000/polishes").then(function(data) {
           deferred.resolve(data);
         });
         return deferred.promise;
       };
       function sendPayload(formData, method, url) {
-        console.log(formData)
         var deferred = $q.defer();
         Upload.upload({
           url: url,
@@ -33,6 +32,7 @@
           fileFormDataName: 'polish[picture]',
         })
         .then(function (resp) {
+          console.log(formData)
           deferred.resolve(resp.data);
         }, function (resp) {
           console.log('Error status: ' + resp.status);
