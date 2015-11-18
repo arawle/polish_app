@@ -37,6 +37,11 @@
         console.log('Error: ' + data)
       })
     }
+
+    PolishFactory.deleteState = function (polishId, state) {
+      var url = '/polishes/' + polishId + '/states/' + state.id
+      $http.delete(url, state)
+    }
     return PolishFactory;
   }
 })();

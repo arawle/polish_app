@@ -35,8 +35,9 @@
     $scope.editState = function (state){
       //edit a polish state
     };
-    $scope.deleteState = function (state){
-      //delete a polish state
+    $scope.deleteState = function (polishId, state){
+      PolishFactory.deleteState(polishId, state)
+      $scope.states = PolishFactory.findStates($routeParams.id);
     };
   }
 })();
