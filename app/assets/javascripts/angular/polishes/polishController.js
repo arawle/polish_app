@@ -30,7 +30,8 @@
     //go back to brand page
 
     $scope.addPolishState = function (id, state){
-      PolishFactory.addPolishState(id, state)
+      PolishFactory.addPolishState(id, state);
+      $scope.states = PolishFactory.findStates($routeParams.id);
     };
     $scope.editState = function (state){
       //edit a polish state
