@@ -28,16 +28,13 @@
     //go back to all polishes
 
     //go back to brand page
-    $scope.addPolishStateWithPhoto = function (polishId, state){
-
-      $scope.states = PolishFactory.findStates($routeParams.id);
-    }
-
-
-
     $scope.addPolishState = function (polishId, state){
-      PolishFactory.addPolishState(polishId, state);
-      $scope.states = PolishFactory.findStates($routeParams.id);
+      var newObject = {state: $scope.state};
+      PolishFactory.createStateWithAttachment(polishId, newObject).then(function(data) {
+        console.log('success');
+      });
+      // PolishFactory.addPolishState(polishId, state);
+      // $scope.states = PolishFactory.findStates($routeParams.id);
     };
     $scope.editPolishState = function (polishId, state){
       PolishFactory.editPolishState(polishId, state)
