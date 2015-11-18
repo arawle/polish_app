@@ -34,7 +34,7 @@
       $scope.states = PolishFactory.findStates($routeParams.id);
     };
     $scope.editPolishState = function (polishId, state){
-      PolishFactory.editState(polishId, state)
+      PolishFactory.editPolishState(polishId, state)
       $scope.states = PolishFactory.findStates($routeParams.id);
     };
     $scope.deletePolishState = function (polishId, state){
