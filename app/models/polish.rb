@@ -1,5 +1,5 @@
 class Polish < ActiveRecord::Base
-  validates_presence_of :brand, :collection, :name, :finish, :color
+  validates_presence_of :brand, :name
   has_many :states
 
   has_attached_file :picture
