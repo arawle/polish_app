@@ -20,7 +20,7 @@
 
     $scope.add= function() {
       var newObject = {polish: $scope.polish};
-      PolishesFactory.createWithAttachment(newObject).then(function(data) {
+      PolishesFactory.createPolishWithAttachment(newObject).then(function(data) {
         $location.path('/polishes/' + data.id);
       });
       $scope.polish = {};

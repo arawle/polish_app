@@ -15,15 +15,16 @@
   function PolishesFactory ($http, $resource, Upload, $q) {
     var PolishesFactory = {};
 
-      PolishesFactory.createWithAttachment = function(formData) {
+      PolishesFactory.createPolishWithAttachment = function(formData) {
         console.log(formData)
         var deferred = $q.defer();
-        sendPayload(formData, "POST", "//localhost:3000/polishes").then(function(data) {
+        sendPolish(formData, "POST", "//localhost:3000/polishes").then(function(data) {
           deferred.resolve(data);
         });
         return deferred.promise;
       };
-      function sendPayload(formData, method, url) {
+
+      function sendPolish(formData, method, url) {
         var deferred = $q.defer();
         Upload.upload({
           url: url,
