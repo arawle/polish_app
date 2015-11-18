@@ -31,17 +31,28 @@
       var states = '/polishes/' + polishId + '/states'
       $http.post(states, state)
       .success(function(data){
-        console.log('success')
+        console.log('success');
       })
       .error(function(data){
-        console.log('Error: ' + data)
-      })
+        console.log('Error: ' + data);
+      });
+    };
+
+    PolishFactory.editPolishState = function (polishId, state){
+      var url = '/polishes/' + polishId + '/states/' + state.id
+
     }
 
-    PolishFactory.deletePolishState = function (polishId, state) {
+    PolishFactory.deletePolishState = function (polishId, state){
       var url = '/polishes/' + polishId + '/states/' + state.id
       $http.delete(url, state)
-    }
-    return PolishFactory;
+      .success(function(data){
+        console.log('success');
+      })
+      .error(function(data){
+        console.log('Error: ' + data);
+      });
+    };
+  return PolishFactory;
   }
 })();
