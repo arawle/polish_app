@@ -40,8 +40,14 @@
 
     PolishFactory.editPolishState = function (polishId, state){
       var url = '/polishes/' + polishId + '/states/' + state.id
-
-    }
+      $http.put(url, state)
+      .success(function(data){
+        console.log('success');
+      })
+      .error(function(data){
+        console.log('Error: ' + data);
+      });
+    };
 
     PolishFactory.deletePolishState = function (polishId, state){
       var url = '/polishes/' + polishId + '/states/' + state.id
