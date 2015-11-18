@@ -32,7 +32,7 @@
     PolishFactory.createStateWithAttachment = function(polishId, formData){
       console.log(polishId, formData)
       var deferred = $q.defer();
-      var url = "//localhost:3000/polishes/" + polishId + "/states";
+      var url = "//polish.herokuapp.com/polishes/" + polishId + "/states";
       sendState(formData, "POST", url).then(function(data){
         deferred.resolve(data);
       });
