@@ -16,6 +16,7 @@
     var PolishesFactory = {};
 
       PolishesFactory.createWithAttachment = function(formData) {
+        console.log(formData)
         var deferred = $q.defer();
         sendPayload(formData, "POST", "//localhost:3000/polishes").then(function(data) {
           deferred.resolve(data);
@@ -32,7 +33,6 @@
           fileFormDataName: 'polish[picture]',
         })
         .then(function (resp) {
-          console.log(formData)
           deferred.resolve(resp.data);
         }, function (resp) {
           console.log('Error status: ' + resp.status);

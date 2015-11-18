@@ -54,7 +54,7 @@
   <div ng-repeat="polish in allPolishes | filter: searchPolish" >
     <div class="col-xs-6 col-sm-3 placeholder">
       <h4>{{polish.name}}</h4>
-      <img ng-src="{{polish.original}}" class="img-responsive" alt="thumbnail">
+      <img ng-src="{{polish.url}}" class="img-responsive" alt="thumbnail">
       <br/>
       <span class="text-muted">
         Brand: {{polish.brand}}

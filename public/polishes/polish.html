@@ -43,19 +43,17 @@
       <label for="color">Color:</label>
       <input type="text" class="form-control" ng-model="polish.color" required/>
     </div>
-
-    <div class="form-group">
+<!--     <div class="form-group">
       <label for="photo">Picture:</label>
       <input type="text" class="form-control" ng-model="polish.photo"/>
-    </div>
-
+    </div> -->
     <br/>
     <button class="btn btn-default btn-sm" type="submit" ng-click="updatePolish(polish); editPolish = ! editPolish">Submit Changes</button>
   </form>
   <div class="row">
     <h3>More Information</h3>
     <div class="col-lg-4">
-      <img src="{{polish.original}}">
+      <img src="{{polish.url}}">
     </div>
     <div class="col-lg-4">
       <br/>
@@ -69,9 +67,9 @@
     </div>
   </div>
 </div>
-
-<button class="btn btn-success btn-xs" ng-click="addState = ! addState">Add State</button>
-
+<div class="row">
+  <button class="btn btn-success btn-xs" ng-click="addState = ! addState">Add State</button>
+</div>
  <form role="form" class="form-inline stateAddForm" name="stateForm" ng-show="addState">
     <div class="form-group">
       <label for="condition">Condition:</label>

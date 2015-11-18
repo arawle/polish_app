@@ -4,14 +4,17 @@ class PolishesController < ApplicationController
   #GET /polishes
   def index
     @polishes = Polish.all
-    polishes = []
-    @polishes.each do |polish|
-      original = polish.picture.url(:original)
-      polish = polish.as_json
-      polish[:original] = original
-      polishes << polish
-    end
-    render json: polishes, status: :ok
+    # polishes = []
+    # @polishes.each do |polish|
+    #   puts polish.picture.url
+    #   original = polish.picture.url(:original)
+    #   polish = polish.as_json
+    #   polish[:original] = original
+    #   polishes << polish
+    # end
+    # render json: polishes, status: :ok
+    render json: @polishes, status: :ok
+
   end
 
   #GET /polishes/:id
@@ -22,8 +25,10 @@ class PolishesController < ApplicationController
   #POST /polishes
   def create
     @polish = Polish.new(polish_params)
-
     if @polish.save
+      polishObj = {}
+      polishObj[:url] = @polish.picture.url(:original)
+      @polish.update(polishObj)
       render json: @polish, status: :created
     else
       render json: @polish.errors, status: :unprocessable_entity
@@ -51,6 +56,6 @@ class PolishesController < ApplicationController
     end
 
     def polish_params
-      params.require(:polish).permit(:brand, :collection, :releaseYear, :name, :code, :finish, :color, :picture)
+      params.require(:polish).permit(:brand, :collection, :releaseYear, :name, :code, :finish, :color, :picture, :url)
     end
 end
