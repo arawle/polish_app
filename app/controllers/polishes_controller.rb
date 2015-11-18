@@ -4,17 +4,7 @@ class PolishesController < ApplicationController
   #GET /polishes
   def index
     @polishes = Polish.all
-    # polishes = []
-    # @polishes.each do |polish|
-    #   puts polish.picture.url
-    #   original = polish.picture.url(:original)
-    #   polish = polish.as_json
-    #   polish[:original] = original
-    #   polishes << polish
-    # end
-    # render json: polishes, status: :ok
     render json: @polishes, status: :ok
-
   end
 
   #GET /polishes/:id
@@ -29,6 +19,7 @@ class PolishesController < ApplicationController
       polishObj = {}
       polishObj[:url] = @polish.picture.url(:original)
       @polish.update(polishObj)
+      puts @polish
       render json: @polish, status: :created
     else
       render json: @polish.errors, status: :unprocessable_entity
