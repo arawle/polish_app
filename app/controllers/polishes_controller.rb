@@ -19,7 +19,6 @@ class PolishesController < ApplicationController
       polishObj = {}
       polishObj[:url] = @polish.picture.url(:original)
       @polish.update(polishObj)
-      puts @polish
       render json: @polish, status: :created
     else
       render json: @polish.errors, status: :unprocessable_entity
