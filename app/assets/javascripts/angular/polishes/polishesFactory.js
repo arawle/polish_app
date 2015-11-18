@@ -16,7 +16,6 @@
     var PolishesFactory = {};
 
       PolishesFactory.createPolishWithAttachment = function(formData) {
-        console.log(formData)
         var deferred = $q.defer();
         sendPolish(formData, "POST", "//localhost:3000/polishes").then(function(data) {
           deferred.resolve(data);
@@ -33,9 +32,9 @@
           file: formData.polish.picture,
           fileFormDataName: 'polish[picture]',
         })
-        .then(function (resp) {
+        .then(function(resp) {
           deferred.resolve(resp.data);
-        }, function (resp) {
+        }, function(resp) {
           console.log('Error status: ' + resp.status);
         });
         return deferred.promise;
