@@ -24,10 +24,16 @@
     $scope.deletePolish = function (polish){
       ResourceFactory.delete({id: polish.id})
       $location.path('/polishes');
-    }
+    };
     //go back to all polishes
 
     //go back to brand page
+    $scope.addPolishStateWithPhoto = function (polishId, state){
+
+      $scope.states = PolishFactory.findStates($routeParams.id);
+    }
+
+
 
     $scope.addPolishState = function (polishId, state){
       PolishFactory.addPolishState(polishId, state);
