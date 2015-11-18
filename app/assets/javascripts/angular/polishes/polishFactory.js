@@ -46,7 +46,7 @@
         method: method,
         fields: formData,
         file: formData.state.bottleshot,
-        fileFormDataName: 'state[bottleshot]'
+        fileFormDataName: 'state[bottleshot]',
       })
       .then(function(resp){
         deferred.resolve(resp.data);

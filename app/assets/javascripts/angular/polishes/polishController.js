@@ -32,9 +32,8 @@
       var newObject = {state: $scope.state};
       PolishFactory.createStateWithAttachment(polishId, newObject).then(function(data) {
         console.log('success');
+        $scope.states = PolishFactory.findStates($routeParams.id);
       });
-      // PolishFactory.addPolishState(polishId, state);
-      // $scope.states = PolishFactory.findStates($routeParams.id);
     };
     $scope.editPolishState = function (polishId, state){
       PolishFactory.editPolishState(polishId, state)

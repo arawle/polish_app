@@ -34,7 +34,7 @@ class StatesController < ApplicationController
   private
 
   def state_params
-    params.require(:state).permit(:condition, :swatched, :blog, :fill, :thinned, :box, :notes, :bottle_shot, :mani_shot, :original_owner, :for_sale, :for_swap, :obtained, :purchase_price, :size, :picture)
+    params.require(:state).permit(:condition, :swatched, :blog, :fill, :thinned, :box, :notes, :bottle_shot, :mani_shot, :original_owner, :for_sale, :for_swap, :obtained, :purchase_price, :size, :picture, :bottleshot)
   end
 
   def set_state
