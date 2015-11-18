@@ -38,7 +38,7 @@
       })
     }
 
-    PolishFactory.deleteState = function (polishId, state) {
+    PolishFactory.deletePolishState = function (polishId, state) {
       var url = '/polishes/' + polishId + '/states/' + state.id
       $http.delete(url, state)
     }

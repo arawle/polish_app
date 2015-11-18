@@ -29,15 +29,16 @@
 
     //go back to brand page
 
-    $scope.addPolishState = function (id, state){
-      PolishFactory.addPolishState(id, state);
+    $scope.addPolishState = function (polishId, state){
+      PolishFactory.addPolishState(polishId, state);
       $scope.states = PolishFactory.findStates($routeParams.id);
     };
-    $scope.editState = function (state){
-      //edit a polish state
+    $scope.editPolishState = function (polishId, state){
+      PolishFactory.editState(polishId, state)
+      $scope.states = PolishFactory.findStates($routeParams.id);
     };
-    $scope.deleteState = function (polishId, state){
-      PolishFactory.deleteState(polishId, state)
+    $scope.deletePolishState = function (polishId, state){
+      PolishFactory.deletePolishState(polishId, state)
       $scope.states = PolishFactory.findStates($routeParams.id);
     };
   }
