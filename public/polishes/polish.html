@@ -82,10 +82,10 @@
     <div class="form-group">
       <label for="blog">Blogged?</label>
       <label>
-        <input type="radio" value="true" ng-model="state.blog" />Yes
+        <input type="radio" value="true" ng-model="state.blog" /><span class="unbold">Yes</span>
       </label>
       <label>
-        <input type="radio" value="false" ng-model="state.blog" />No
+        <input type="radio" value="false" ng-model="state.blog" /><span class="unbold">No</span>
       </label>
     </div>
     <div class="form-group">
@@ -99,10 +99,10 @@
     <div class="form-group">
       <label for="box">Box?</label>
       <label>
-        <input type="radio" value="true" ng-model="state.box" />Yes
+        <input type="radio" value="true" ng-model="state.box" /><span class="unbold">Yes</span>
       </label>
       <label>
-        <input type="radio" value="false" ng-model="state.box" />No
+        <input type="radio" value="false" ng-model="state.box" /><span class="unbold">No</span>
       </label>
     </div>
     <div class="form-group">
@@ -124,28 +124,28 @@
     <div class="form-group">
       <label for="original_owner">Original Owner?</label>
       <label>
-        <input type="radio" value="true" ng-model="state.original_owner" />Yes
+        <input type="radio" value="true" ng-model="state.original_owner" /><span class="unbold">Yes</span>
       </label>
       <label>
-        <input type="radio" value="false" ng-model="state.original_owner" />No
+        <input type="radio" value="false" ng-model="state.original_owner" /><span class="unbold">No</span>
       </label>
     </div>
     <div class="form-group">
       <label for="for_sale">For Sale?</label>
       <label>
-        <input type="radio" value="true" ng-model="state.for_sale" />Yes
+        <input type="radio" value="true" ng-model="state.for_sale" /><span class="unbold">Yes</span>
       </label>
       <label>
-        <input type="radio" value="false" ng-model="state.for_sale" />No
+        <input type="radio" value="false" ng-model="state.for_sale" /><span class="unbold">No</span>
       </label>
     </div>
     <div class="form-group">
       <label for="for_swap">For Swap?</label>
       <label>
-        <input type="radio" value="true" ng-model="state.for_swap" />Yes
+        <input type="radio" value="true" ng-model="state.for_swap" /><span class="unbold">Yes</span>
       </label>
       <label>
-        <input type="radio" value="false" ng-model="state.for_swap" />No
+        <input type="radio" value="false" ng-model="state.for_swap" /><span class="unbold">No</span>
       </label>
     </div>
     <div class="form-group">
@@ -176,8 +176,8 @@
         For Swap: {{state.for_swap}}
         <br/>
       </span>
-      <button class="btn btn-warning btn-xs" ng-click="edit(state)">Edit</button>
-      <button class="btn btn-danger btn-xs" ng-click="delete(state)">Delete</button>
+      <button class="btn btn-warning btn-xs" ng-click="editState(polish.id, state)">Edit</button>
+      <button class="btn btn-danger btn-xs" ng-click="deleteState(polish.id, state)">Delete</button>
     </div>
   </div>
 </div>
