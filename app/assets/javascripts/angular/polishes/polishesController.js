@@ -33,7 +33,6 @@
     };
 
     $scope.delete = function (polish){
-      console.log(polish)
       ResourceFactory.delete({id: polish.id})
       $scope.allPolishes = ResourceFactory.query();
     };
