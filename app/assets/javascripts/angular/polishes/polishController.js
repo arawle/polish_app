@@ -29,6 +29,7 @@
 
     //go back to brand page
     $scope.addPolishState = function (polishId, state){
+      console.log(state)
       var newObject = {state: $scope.state};
       PolishFactory.createStateWithAttachment(polishId, newObject).then(function(data) {
         console.log('success');

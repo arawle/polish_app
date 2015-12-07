@@ -32,7 +32,37 @@
     PolishFactory.createStateWithAttachment = function(polishId, formData){
       console.log(polishId, formData)
       var deferred = $q.defer();
-      var url = "//polish.herokuapp.com/polishes/" + polishId + "/states";
+      var url = "//localhost:3000/polishes/" + polishId + "/states";
+      if (formData.blog == true){
+        formData.blog = Time.now
+        console.log(formData.blog)
+      } else {
+        formData.blog = null
+      }
+      if (formData.box == true){
+        formData.box = Time.now
+        console.log(formData.box)
+      } else {
+        formData.box = null
+      }
+      if (formData.original_owner == true){
+        formData.original_owner = Time.now
+        console.log(formData.original_owner)
+      } else {
+        formData.original_owner = null
+      }
+      if (formData.for_sale == true){
+        formData.for_sale = Time.now
+        console.log(formData.for_sale)
+      } else {
+        formData.for_sale = null
+      }
+      if (formData.for_swap == true){
+        formData.for_swap = Time.now
+        console.log(formData.for_swap)
+      } else {
+        formData.for_swap = null
+      }
       sendState(formData, "POST", url).then(function(data){
         deferred.resolve(data);
       });
