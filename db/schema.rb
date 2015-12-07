@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151118180758) do
+ActiveRecord::Schema.define(version: 20151207180435) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,19 +36,14 @@ ActiveRecord::Schema.define(version: 20151118180758) do
   create_table "states", force: :cascade do |t|
     t.string   "condition"
     t.string   "swatched"
-    t.boolean  "blog"
     t.string   "fill"
     t.string   "thinned"
-    t.boolean  "box"
     t.string   "notes"
     t.string   "bottle_shot"
     t.string   "mani_shot"
-    t.boolean  "original_owner"
     t.datetime "created_at",              null: false
     t.datetime "updated_at",              null: false
     t.integer  "polish_id"
-    t.boolean  "for_sale"
-    t.boolean  "for_swap"
     t.string   "obtained"
     t.string   "purchase_price"
     t.string   "size"
@@ -56,6 +51,15 @@ ActiveRecord::Schema.define(version: 20151118180758) do
     t.string   "bottleshot_content_type"
     t.integer  "bottleshot_file_size"
     t.datetime "bottleshot_updated_at"
+    t.string   "manishot_file_name"
+    t.string   "manishot_content_type"
+    t.integer  "manishot_file_size"
+    t.datetime "manishot_updated_at"
+    t.datetime "blog"
+    t.datetime "box"
+    t.datetime "original_owner"
+    t.datetime "for_sale"
+    t.datetime "for_swap"
   end
 
 end
