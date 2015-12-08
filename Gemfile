@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+gem 'angularjs-rails'
 #aws gem
 gem 'aws-sdk', '~> 2'
 #image uploading
