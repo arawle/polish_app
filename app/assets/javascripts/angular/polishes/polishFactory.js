@@ -30,31 +30,7 @@
     };
 
     PolishFactory.createStateWithAttachment = function(polishId, formData){
-      if (formData.state.blog == "true"){
-        formData.state.blog = new Date()
-      } else {
-        formData.state.blog = null
-      }
-      if (formData.state.box == "true"){
-        formData.state.box = new Date()
-      } else {
-        formData.state.box = null
-      }
-      if (formData.state.original_owner == "true"){
-        formData.state.original_owner = new Date()
-      } else {
-        formData.state.original_owner = null
-      }
-      if (formData.state.for_sale == "true"){
-        formData.state.for_sale = new Date()
-      } else {
-        formData.state.for_sale = null
-      }
-      if (formData.state.for_swap == "true"){
-        formData.state.for_swap = new Date()
-      } else {
-        formData.state.for_swap = null
-      }
+
 
       var deferred = $q.defer();
       var url = "//localhost:3000/polishes/" + polishId + "/states";
