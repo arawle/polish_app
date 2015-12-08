@@ -30,39 +30,34 @@
     };
 
     PolishFactory.createStateWithAttachment = function(polishId, formData){
-      console.log(polishId, formData)
+      if (formData.state.blog == "true"){
+        formData.state.blog = new Date()
+      } else {
+        formData.state.blog = null
+      }
+      if (formData.state.box == "true"){
+        formData.state.box = new Date()
+      } else {
+        formData.state.box = null
+      }
+      if (formData.state.original_owner == "true"){
+        formData.state.original_owner = new Date()
+      } else {
+        formData.state.original_owner = null
+      }
+      if (formData.state.for_sale == "true"){
+        formData.state.for_sale = new Date()
+      } else {
+        formData.state.for_sale = null
+      }
+      if (formData.state.for_swap == "true"){
+        formData.state.for_swap = new Date()
+      } else {
+        formData.state.for_swap = null
+      }
+
       var deferred = $q.defer();
       var url = "//localhost:3000/polishes/" + polishId + "/states";
-      if (formData.blog == true){
-        formData.blog = Time.now
-        console.log(formData.blog)
-      } else {
-        formData.blog = null
-      }
-      if (formData.box == true){
-        formData.box = Time.now
-        console.log(formData.box)
-      } else {
-        formData.box = null
-      }
-      if (formData.original_owner == true){
-        formData.original_owner = Time.now
-        console.log(formData.original_owner)
-      } else {
-        formData.original_owner = null
-      }
-      if (formData.for_sale == true){
-        formData.for_sale = Time.now
-        console.log(formData.for_sale)
-      } else {
-        formData.for_sale = null
-      }
-      if (formData.for_swap == true){
-        formData.for_swap = Time.now
-        console.log(formData.for_swap)
-      } else {
-        formData.for_swap = null
-      }
       sendState(formData, "POST", url).then(function(data){
         deferred.resolve(data);
       });
@@ -70,6 +65,7 @@
     };
 
     function sendState(formData, method, url){
+      console.log(formData)
       var deferred = $q.defer();
       Upload.upload({
         url: url,
