@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151209020640) do
+ActiveRecord::Schema.define(version: 20151209210432) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -50,11 +50,11 @@ ActiveRecord::Schema.define(version: 20151209020640) do
     t.string   "bottleshot_content_type"
     t.integer  "bottleshot_file_size"
     t.datetime "bottleshot_updated_at"
-    t.datetime "blog"
-    t.datetime "box"
-    t.datetime "original_owner"
-    t.datetime "for_sale"
-    t.datetime "for_swap"
+    t.datetime "blog_at"
+    t.datetime "box_at"
+    t.datetime "original_owner_at"
+    t.datetime "for_sale_at"
+    t.datetime "for_swap_at"
     t.decimal  "size"
   end
 
