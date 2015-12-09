@@ -18,6 +18,10 @@ class StateSerializer < ActiveModel::Serializer
     for_swap
   )
 
+  def size
+    object.size.to_i
+  end
+
   def blog
     object.blog_at ? 'yes' : 'no'
   end
