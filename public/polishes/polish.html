@@ -167,9 +167,13 @@
         <br/>
         Size: {{state.size}}
         <br/>
-        For Sale: {{state.for_sale}}
+        For Sale:
+          <span ng-show="state.for_sale != null">Yes</span>
+          <span ng-show="state.for_sale == null">No</span>
         <br/>
-        For Swap: {{state.for_swap}}
+        For Swap:
+          <span ng-show="state.for_swap != null">Yes</span>
+          <span ng-show="state.for_swap == null">No</span>
         <br/>
       </span>
       <button class="btn btn-warning btn-xs" ng-click="editState = ! editState">Edit</button>
