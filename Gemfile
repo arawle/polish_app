@@ -1,4 +1,6 @@
 source 'https://rubygems.org'
+
+gem 'active_model_serializers'
 gem 'angularjs-rails'
 #aws gem
 gem 'aws-sdk', '~> 2'
