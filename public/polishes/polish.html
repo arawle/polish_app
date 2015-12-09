@@ -103,7 +103,7 @@
     </div>
     <div class="form-group">
       <label for="size">Size (in mL):</label>
-      <input type="text" class="form-control" ng-model="state.size" />
+      <input type="number" class="form-control" ng-model="state.size" />
     </div>
     <div class="form-group">
       <label for="notes">Notes:</label>
@@ -167,7 +167,7 @@
         <br/>
         Condition: {{state.condition}}
         <br/>
-        Size: {{state.size}}
+        Size: {{state.size}} mL
         <br/>
         For Sale:
           <span ng-show="state.for_sale != null">Yes</span>
@@ -218,7 +218,7 @@
       </div>
       <div class="form-group">
         <label for="size">Size (in mL):</label>
-        <input type="text" class="form-control" ng-model="state.size" />
+        <input type="number" class="form-control" ng-model="state.size" />
       </div>
       <div class="form-group">
         <label for="notes">Notes:</label>
