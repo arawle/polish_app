@@ -161,7 +161,9 @@
   <div ng-repeat="state in states[0] | filter: searchState" >
     <div class="col-xs-6 col-sm-3 placeholder">
       <span class="text-muted">
-        Box: {{state.box}}
+        Box:
+          <span ng-show="state.box != null">Yes</span>
+          <span ng-show="state.box == null">No</span>
         <br/>
         Condition: {{state.condition}}
         <br/>
