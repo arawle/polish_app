@@ -1,4 +1,13 @@
 GIT
+  remote: git://github.com/rails-api/active_model_serializers.git
+  revision: d64c7e11d674235cb8f03e6a6cf4a9e03a3a2b8e
+  specs:
+    active_model_serializers (0.10.0.rc3)
+      actionpack (>= 4.0)
+      activemodel (>= 4.0)
+      railties (>= 4.0)
+
+GIT
   remote: git://github.com/thoughtbot/paperclip.git
   revision: d66d80fcb7c8a38f87dca2da08b4b0a96e2ee72c
   specs:
@@ -31,8 +40,6 @@ GEM
       erubis (~> 2.7.0)
       rails-dom-testing (~> 1.0, >= 1.0.5)
       rails-html-sanitizer (~> 1.0, >= 1.0.2)
-    active_model_serializers (0.9.3)
-      activemodel (>= 3.2)
     activejob (4.2.4)
       activesupport (= 4.2.4)
       globalid (>= 0.3.0)
@@ -54,6 +61,7 @@ GEM
     autoprefixer-rails (6.0.3)
       execjs
       json
+    awesome_print (1.6.1)
     aws-sdk (2.2.0)
       aws-sdk-resources (= 2.2.0)
     aws-sdk-core (2.2.0)
@@ -199,8 +207,9 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  active_model_serializers
+  active_model_serializers!
   angularjs-rails
+  awesome_print
   aws-sdk (~> 2)
   bootstrap-sass (~> 3.3.5)
   byebug

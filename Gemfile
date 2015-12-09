@@ -1,11 +1,11 @@
 source 'https://rubygems.org'
 
-gem 'active_model_serializers'
+gem 'active_model_serializers', github: 'rails-api/active_model_serializers'
 gem 'angularjs-rails'
 #aws gem
 gem 'aws-sdk', '~> 2'
 #image uploading
-gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
+gem "paperclip", github: 'thoughtbot/paperclip'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'
 # Use postgresql as the database for Active Record
@@ -29,6 +29,8 @@ gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
+
+gem 'awesome_print'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
