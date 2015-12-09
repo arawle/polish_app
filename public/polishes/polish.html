@@ -72,8 +72,14 @@
       <input type="text" class="form-control" ng-model="state.condition" required/>
     </div>
     <div class="form-group">
-      <label for="swatched">Swatched:</label>
-      <input type="text" class="form-control" ng-model="state.swatched" />
+      <label for="swatched"> Swatched: </label>
+      <select  ng-model="state.swatched">
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+        <option value="wheel">Wheel</option>
+        <option value="1 Finger">1 Finger</option>
+        <option value="1/2 Mani">1/2 Mani</option>
+      </select><br>
     </div>
     <div class="form-group">
       <label for="blog">Blogged?</label>
@@ -187,8 +193,14 @@
         <input type="text" class="form-control" ng-model="state.condition" required/>
       </div>
       <div class="form-group">
-        <label for="swatched">Swatched:</label>
-        <input type="text" class="form-control" ng-model="state.swatched" />
+        <label for="swatched"> Swatched: </label>
+        <select  ng-model="state.swatched">
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+          <option value="wheel">Wheel</option>
+          <option value="1 Finger">1 Finger</option>
+          <option value="1/2 Mani">1/2 Mani</option>
+        </select><br>
       </div>
       <div class="form-group">
         <label for="blog">Blogged?</label>
