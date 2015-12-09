@@ -1,6 +1,6 @@
 class StatesController < ApplicationController
   before_action :set_state, only: [:show, :update, :destroy]
-  before_filter :create_time, only: [:create]
+  before_filter :create_time, only: [:create, :update]
 
   def index
     @states = State.all.where(polish_id: params[:polish_id])
@@ -44,7 +44,6 @@ class StatesController < ApplicationController
 
   def create_time
     @polish = Polish.find(params[:polish_id])
-
     if state_params[:blog] == "yes"
       params[:state][:blog] = DateTime.current()
       puts state_params[:blog]
