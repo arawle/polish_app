@@ -11,7 +11,6 @@ app.directive('stringToNumber', function() {
       function toView(value) {
         return parseInt(value); // convert to number
       }
-
       ngModel.$formatters.push(toView);
       ngModel.$parsers.push(toModel);
     }
