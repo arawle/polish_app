@@ -37,5 +37,5 @@ RSpec.describe Polish, type: :model do
     it { is_expected.to_not be_valid}
   end
   #photo
-  it { is_expected.to respond_to :photo}
+  it { is_expected.to respond_to :url}
 end
