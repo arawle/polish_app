@@ -16,6 +16,7 @@ class StateSerializer < ActiveModel::Serializer
     original_owner
     for_sale
     for_swap
+    id
   )
 
   def size
