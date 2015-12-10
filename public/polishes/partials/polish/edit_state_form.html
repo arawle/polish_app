@@ -1,0 +1,95 @@
+ <form role="form" class="form-inline stateAddForm" name="stateForm" ng-show="editState">
+  <div class="form-group">
+    <label for="condition">Condition:</label>
+    <input type="text" class="form-control" ng-model="state.condition" required/>
+  </div>
+  <div class="form-group">
+    <label for="swatched"> Swatched: </label>
+    <select  ng-model="state.swatched">
+      <option value="Yes">Yes</option>
+      <option value="No">No</option>
+      <option value="wheel">Wheel</option>
+      <option value="1 Finger">1 Finger</option>
+      <option value="1/2 Mani">1/2 Mani</option>
+    </select><br>
+  </div>
+  <div class="form-group">
+    <label for="blog">Blogged?</label>
+    <label>
+      <input type="radio" value="yes" ng-model="state.blog" /><span class="unbold">Yes</span>
+    </label>
+    <label>
+      <input type="radio" value="no" ng-model="state.blog" /><span class="unbold">No</span>
+    </label>
+  </div>
+  <div class="form-group">
+    <label for="fill">Fill:</label>
+    <input type="text" class="form-control" ng-model="state.fill">
+  </div>
+  <div class="form-group">
+    <label for="thinned">Thinned:</label>
+    <input type="text" class="form-control" ng-model="state.thinned"/>
+  </div>
+  <div class="form-group">
+    <label for="box">Box?</label>
+    <label>
+      <input type="radio" value="yes" ng-model="state.box" /><span class="unbold">Yes</span>
+    </label>
+    <label>
+      <input type="radio" value="no" ng-model="state.box" /><span class="unbold">No</span>
+    </label>
+  </div>
+  <div class="form-group">
+    <label for="size">Size (in mL):</label>
+    <input type="number" class="form-control" ng-model="state.size" />
+  </div>
+  <div class="form-group">
+    <label for="notes">Notes:</label>
+    <input type="text-area" class="form-control" ng-model="state.notes" required/>
+  </div>
+  <div class="form-group">
+    <label for="bottle_shot">Bottle Shot Url:</label>
+    <input type="text" class="form-control" ng-model="state.bottle_shot"/>
+  </div>
+  <div class="form-group">
+    <label for="mani_shot">Mani Shot Url:</label>
+    <input type="text" class="form-control" ng-model="state.mani_shot"/>
+  </div>
+  <div class="form-group">
+    <label for="original_owner">Original Owner?</label>
+    <label>
+      <input type="radio" value="yes" ng-model="state.original_owner" /><span class="unbold">Yes</span>
+    </label>
+    <label>
+      <input type="radio" value="no" ng-model="state.original_owner" /><span class="unbold">No</span>
+    </label>
+  </div>
+  <div class="form-group">
+    <label for="for_sale">For Sale?</label>
+    <label>
+      <input type="radio" value="yes" ng-model="state.for_sale" /><span class="unbold">Yes</span>
+    </label>
+    <label>
+      <input type="radio" value="no" ng-model="state.for_sale" /><span class="unbold">No</span>
+    </label>
+  </div>
+  <div class="form-group">
+    <label for="for_swap">For Swap?</label>
+    <label>
+      <input type="radio" value="yes" ng-model="state.for_swap" /><span class="unbold">Yes</span>
+    </label>
+    <label>
+      <input type="radio" value="no" ng-model="state.for_swap" /><span class="unbold">No</span>
+    </label>
+  </div>
+  <div class="form-group">
+    <label for="obtained">Obtained:</label>
+    <input type="text" class="form-control" ng-model="state.obtained"/>
+  </div>
+  <div class="form-group">
+    <label for="purchase_price">Purchase Price:</label>
+    <input type="text" class="form-control" ng-model="state.purchase_price"/>
+  </div>
+  <br/>
+  <button class="btn btn-default btn-sm" type="submit" ng-click="editPolishState(polish.id, state); editState = ! editState">Edit State</button>
+</form>
