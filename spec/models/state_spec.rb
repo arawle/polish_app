@@ -16,7 +16,7 @@ RSpec.describe State, type: :model do
     it { is_expected.to_not be_valid}
   end
   #blog
-  it { is_expected.to respond_to :blog}
+  it { is_expected.to respond_to :blog_at}
   #fill
   it { is_expected.to respond_to :fill}
   describe '#fill' do
@@ -30,9 +30,9 @@ RSpec.describe State, type: :model do
     it { is_expected.to_not be_valid}
   end
   #box
-  it { is_expected.to respond_to :box}
+  it { is_expected.to respond_to :box_at}
   describe '#box' do
-    subject(:invalid_box) {State.create(box:"")}
+    subject(:invalid_box_at) {State.create(box_at:"")}
     it { is_expected.to_not be_valid}
   end
   #notes
@@ -42,21 +42,21 @@ RSpec.describe State, type: :model do
   #mani_shot
   it { is_expected.to respond_to :mani_shot}
   #original_owner
-  it { is_expected.to respond_to :original_owner}
-  describe '#original_owner' do
-    subject(:invalid_original_owner) {State.create(original_owner:"")}
+  it { is_expected.to respond_to :original_owner_at}
+  describe '#original_owner_at' do
+    subject(:invalid_original_owner_at) {State.create(original_owner_at:"")}
     it { is_expected.to_not be_valid}
   end
   #for sale
-  it { is_expected.to respond_to :for_sale }
-  describe '#for_sale' do
-    subject(:invalid_for_sale) {State.create(for_sale:"")}
+  it { is_expected.to respond_to :for_sale_at }
+  describe '#for_sale_at' do
+    subject(:invalid_for_sale_at) {State.create(for_sale_at:"")}
     it { is_expected.to_not be_valid}
   end
   #for swap
-  it { is_expected.to respond_to :for_swap}
-  describe '#for_sale' do
-    subject(:invalid_for_swap) {State.create(for_swap:"")}
+  it { is_expected.to respond_to :for_swap_at}
+  describe '#for_swap_at' do
+    subject(:invalid_for_swap_at) {State.create(for_swap_at:"")}
     it { is_expected.to_not be_valid}
   end
   #obtained
