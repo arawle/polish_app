@@ -35,7 +35,7 @@
 <div class="row">
   <button class="btn btn-success btn-xs" ng-click="addState = ! addState">Add State</button>
 </div>
-<div ng-include src="'polishes/partials/polish/add_state_form.html'"></div>
+<div ng-include src="'polishes/partials/state/add_state_form.html'"></div>
 <br/>
 <br/>
 <div class="row placeholders">
@@ -62,6 +62,6 @@
       <button class="btn btn-warning btn-xs" ng-click="editState = ! editState">Edit</button>
       <button class="btn btn-danger btn-xs" ng-click="deletePolishState(polish.id, state)">Delete</button>
     </div>
-    <div ng-include src="'polishes/partials/polish/edit_state_form.html'"></div>
+    <div ng-include src="'polishes/partials/state/edit_state_form.html'"></div>
   </div>
 </div>

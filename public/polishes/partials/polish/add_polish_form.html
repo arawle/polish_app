@@ -1,0 +1,35 @@
+<form role="form" class="form-inline polishAddForm" name="polishForm" ng-show="addPolish">
+  <div class="form-group">
+    <label for="brand">Brand:</label>
+    <input type="text" class="form-control" ng-model="polish.brand" required/>
+  </div>
+  <div class="form-group">
+    <label for="collection">Collection:</label>
+    <input type="text" class="form-control" ng-model="polish.collection" />
+  </div>
+  <div class="form-group">
+    <label for="name">Name:</label>
+    <input type="text" class="form-control" ng-model="polish.name" required/>
+  </div>
+  <div class="form-group">
+    <label for="releaseYear">Release Year:</label>
+    <input type="text" class="form-control" ng-model="polish.releaseYear">
+  </div>
+  <div class="form-group">
+    <label for="code">Barcode/Stock Code:</label>
+    <input type="text" class="form-control" ng-model="polish.code"/>
+  </div>
+  <div class="form-group">
+    <label for="finish">Finish:</label>
+    <input type="text" class="form-control" ng-model="polish.finish" required/>
+  </div>
+  <div class="form-group">
+    <label for="color">Color:</label>
+    <input type="text" class="form-control" ng-model="polish.color" required/>
+  </div>
+  <div class="form-group">
+    <input type="file" ngf-select ng-model="polish.picture"/>
+  </div>
+  <br/>
+  <button class="btn btn-default" type="submit" ng-click="add(polish); addPolish = ! addPolish">Add Polish</button>
+</form>
