@@ -2,7 +2,7 @@ class CreateCollections < ActiveRecord::Migration
   def change
     create_table :collections do |t|
       t.references :user, index: true, foreign_key: true
-      t.references :state, index: true, foreign_key: true
+      t.references :polish, index: true, foreign_key: true
 
       t.timestamps null: false
     end
