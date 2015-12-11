@@ -3,4 +3,7 @@ class User < ActiveRecord::Base
   validates :email, presence: :true
 
   has_secure_password
+
+  has_many :collections, dependent: :destroy
+  has_many :polishes, through: :collections
 end
