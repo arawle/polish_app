@@ -22,8 +22,15 @@
     };
 
     $scope.register = function() {
+      console.log($scope.user)
       Auth.register($scope.user).then(function(){
         console.log('signed up')
+      });
+    };
+
+    $scope.logout = function() {
+      Auth.logout($scope.user).then(function(){
+        console.log('logged out')
       });
     };
   };
