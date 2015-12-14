@@ -11,13 +11,15 @@
   function configFunction($routeProvider, $locationProvider) {
     $routeProvider
       .when('/login', {
-        controller: 'navController'
+        templateUrl: '/auth/_login.html',
+        controller: 'authController'
       })
       .when('/logout', {
-        controller: 'navController'
+        controller: 'authController'
       })
       .when('/register', {
-        controller: 'navController'
+        templateUrl: 'auth/_register.html',
+        controller: 'authController'
       });
     $locationProvider.html5Mode(false);
   }
