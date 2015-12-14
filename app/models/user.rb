@@ -8,4 +8,5 @@ class User < ActiveRecord::Base
   has_many :states
 
   has_secure_password
+  #test
 end
