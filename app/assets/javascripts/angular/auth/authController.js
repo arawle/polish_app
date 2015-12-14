@@ -17,12 +17,12 @@
 
     $scope.login = function() {
       Auth.login($scope.user).then(function(){
-        console.log('logged in')
+        console.log($scope.user)
+        $location.path( "/polishes" );
       });
     };
 
     $scope.register = function() {
-      console.log($scope.user)
       Auth.register($scope.user).then(function(){
         console.log('signed up')
       });
