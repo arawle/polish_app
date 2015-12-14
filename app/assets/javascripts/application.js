@@ -15,4 +15,5 @@
 //= require angular/lib/angular.min
 //= require_tree ./angular/lib
 //= require angular/polishes/app
+//= require angular-devise
 //= require_tree .
