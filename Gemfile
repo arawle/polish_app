@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'devise'
+
 gem 'active_model_serializers', github: 'rails-api/active_model_serializers'
 gem 'angularjs-rails'
 #aws gem
@@ -33,7 +35,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'awesome_print'
 
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.7'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
