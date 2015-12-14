@@ -4,6 +4,9 @@ end
 
 source 'https://rubygems.org'
 
+#csrf token for angular-devise
+gem 'angular_rails_csrf'
+#user auth
 gem 'devise'
 
 gem 'active_model_serializers', github: 'rails-api/active_model_serializers'
