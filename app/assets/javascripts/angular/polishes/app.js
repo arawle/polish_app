@@ -1,7 +1,7 @@
 (function(){
   'use strict';
 
-  angular.module('myapp', ['ngRoute', 'ngResource', 'ngFileUpload'])
+  angular.module('myapp', ['ngRoute', 'ngResource', 'ngFileUpload', 'Devise'])
     .config(configFunction)
     .config(httpFunction);
 

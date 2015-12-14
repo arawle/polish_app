@@ -1,3 +1,7 @@
+source "https://rails-assets.org" do
+  gem "rails-assets-angular-devise"
+end
+
 source 'https://rubygems.org'
 
 gem 'devise'
