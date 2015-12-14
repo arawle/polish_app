@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'devise'
+
 gem 'active_model_serializers', github: 'rails-api/active_model_serializers'
 gem 'angularjs-rails'
 #aws gem

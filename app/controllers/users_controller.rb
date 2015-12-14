@@ -2,6 +2,7 @@ class UsersController < ApplicationController
   before_action :prevent_login_signup, only: [:new]
   before_action :confirm_logged_in, except: [:new, :create]
   before_action :ensure_correct_user, only: [:edit, :update]
+
   def index
     @users = User.all
   end
