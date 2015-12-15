@@ -10,12 +10,14 @@
     '$location',
     '$routeParams',
     'ResourceFactory',
-    'PolishFactory'
+    'PolishFactory',
+    // 'Auth'
   ];
 
   function polishController($scope, $location, $routeParams, ResourceFactory, PolishFactory){
     $scope.polish = ResourceFactory.get({id: $routeParams.id});
     $scope.states = PolishFactory.findStates($routeParams.id);
+
     //update polish(admin only)
     $scope.updatePolish = function (polish){
       $scope.polish.$update({id: polish.id})

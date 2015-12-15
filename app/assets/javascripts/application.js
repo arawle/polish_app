@@ -15,6 +15,6 @@
 //= require angular/lib/angular.min
 //= require angular/lib/devise-min.js
 //= require_tree ./angular/lib
-//= require angular/polishes/app
 //= require angular/auth/authRoutes
+//= require angular/polishes/app
 //= require_tree .

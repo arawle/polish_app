@@ -1,5 +1,6 @@
 class PolishesController < ApplicationController
   before_action :set_polish, only: [:show, :update, :destroy]
+  before_filter :authenticate_user!
 
   #GET /polishes
   def index

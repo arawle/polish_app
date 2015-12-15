@@ -11,10 +11,11 @@
     '$timeout',
     'PolishesFactory',
     'ResourceFactory',
-    'Upload'
+    'Upload',
+    'Auth'
   ];
 
-  function polishesController($scope, $location, $timeout, PolishesFactory, ResourceFactory, Upload){
+  function polishesController($scope, $location, $timeout, PolishesFactory, ResourceFactory, Upload, Auth){
     $scope.allPolishes = ResourceFactory.query()
     $scope.polish = {}
 
