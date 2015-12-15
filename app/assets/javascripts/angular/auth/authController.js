@@ -33,6 +33,7 @@
     $scope.$on('devise:logout', function (e, user){
       $scope.user = {};
     });
+
     $scope.login = function() {
       Auth.login($scope.user).then(function(){
         console.log($scope.user)

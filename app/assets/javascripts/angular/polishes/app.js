@@ -1,8 +1,6 @@
 (function(){
   'use strict';
 
-  console.log('cheese')
-
   angular.module('myapp', ['ngRoute', 'ngResource', 'ngFileUpload', 'Devise'])
     .config(configFunction)
     .config(httpFunction);
