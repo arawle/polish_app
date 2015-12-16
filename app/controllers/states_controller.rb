@@ -1,5 +1,6 @@
 class StatesController < ApplicationController
-    before_filter :authenticate_user!
+  before_filter :authenticate_user!
+
   def index
     @states = State.all.where(polish_id: params[:polish_id])
     render json: @states, status: :ok

@@ -1,9 +1,9 @@
 (function(){
   'use strict';
 
-  angular.module('myapp', ['ngRoute', 'ngResource', 'ngFileUpload', 'Devise'])
-    .config(configFunction)
-    .config(httpFunction);
+  var myapp = angular.module('myapp');
+    myapp.config(configFunction)
+    myapp.config(httpFunction);
 
   configFunction.$inject = ['$routeProvider', '$locationProvider'];
   httpFunction.$inject = ['$httpProvider'];
