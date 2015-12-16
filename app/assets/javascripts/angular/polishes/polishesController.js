@@ -12,7 +12,7 @@
     'PolishesFactory',
     'ResourceFactory',
     'Upload',
-    'Auth'
+    // 'Auth'
   ];
 
   function polishesController($scope, $location, $timeout, PolishesFactory, ResourceFactory, Upload, Auth){

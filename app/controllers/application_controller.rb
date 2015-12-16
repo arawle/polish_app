@@ -12,6 +12,7 @@ class ApplicationController < ActionController::Base
   end
 
   rescue_from ActionController::InvalidAuthenticityToken do |exception|
+    sign_out(current_user)
     cookies['XSRF-TOKEN'] = form_authenticity_token if protect_against_forgery?
     message = 'Rails CSRF token error, please try again'
     render_with_protection(message.to_json, {:status => :unprocessable_entity})
