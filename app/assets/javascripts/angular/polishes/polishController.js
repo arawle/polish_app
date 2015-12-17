@@ -27,12 +27,9 @@
       ResourceFactory.delete({id: polish.id})
       $location.path('/polishes');
     };
-    //go back to all polishes
 
-    //go back to brand page
     $scope.addPolishState = function (polishId, state){
-      console.log(polishId, state)
-      var newObject = {state: $scope.state};
+      var newObject = {state: state};
       PolishFactory.createStateWithAttachment(polishId, newObject).then(function(data) {
         console.log('success');
         $scope.states = PolishFactory.findStates($routeParams.id);
