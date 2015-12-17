@@ -10,7 +10,7 @@
         <label for="swatched" class="control-label col-xs-2"> Swatched: </label>
         <div class="col-xs-4">
           <select  ng-model="state.swatched">
-            <option value="Yes" ng-selected="true">Yes</option>
+            <option value="Yes">Yes</option>
             <option value="No">No</option>
             <option value="wheel">Wheel</option>
             <option value="1 Finger">1 Finger</option>
@@ -31,7 +31,7 @@
         <div class="col-xs-4">
           <select  ng-model="state.thinned">
             <option value="Yes">Yes</option>
-            <option value="No" ng-selected="true">No</option>
+            <option value="No">No</option>
             <option value="Unknown">Unknown</option>
           </select>
         </div>
@@ -47,7 +47,7 @@
 
         <label for="box" class="control-label col-xs-2">Box?</label>
         <label class="radio-inline">
-          <input type="radio" value="yes" ng-model="state.box" ng-checked="true"/><span class="unbold">Yes</span>
+          <input type="radio" value="yes" ng-model="state.box" /><span class="unbold">Yes</span>
         </label>
         <label class="radio-inline">
           <input type="radio" value="no" ng-model="state.box" /><span class="unbold">No</span>
@@ -64,7 +64,7 @@
 
         <label for="original_owner" class="control-label col-xs-2">Original Owner?</label>
         <label class="radio-inline">
-          <input type="radio" value="yes" ng-model="state.original_owner" ng-checked="true"/><span class="unbold">Yes</span>
+          <input type="radio" value="yes" ng-model="state.original_owner" /><span class="unbold">Yes</span>
         </label>
         <label class="radio-inline">
           <input type="radio" value="no" ng-model="state.original_owner"/><span class="unbold">No</span>
@@ -81,7 +81,7 @@
 
         <label for="blog" class="control-label col-xs-2">Blogged?</label>
         <label class="radio-inline">
-          <input type="radio" value="yes" ng-model="state.blog" ng-checked="true"/><span class="unbold">Yes</span>
+          <input type="radio" value="yes" ng-model="state.blog" /><span class="unbold">Yes</span>
         </label>
         <label class="radio-inline">
           <input type="radio" value="no" ng-model="state.blog"/><span class="unbold">No</span>
@@ -94,7 +94,7 @@
         <label for="for_sale" class="control-label col-xs-2">For Sale?</label>
         <span class="col-xs-2">
           <label class="radio-inline">
-            <input type="radio" value="yes" ng-model="state.for_sale" ng-checked="true"/><span class="unbold">Yes</span>
+            <input type="radio" value="yes" ng-model="state.for_sale" /><span class="unbold">Yes</span>
           </label>
           <label class="radio-inline">
             <input type="radio" value="no" ng-model="state.for_sale"/><span class="unbold">No</span>
@@ -102,7 +102,7 @@
         </span>
         <label for="for_swap" class="control-label col-xs-2">For Swap?</label>
           <label class="radio-inline">
-            <input type="radio" value="yes" ng-model="state.for_swap" ng-checked="true"/><span class="unbold">Yes</span>
+            <input type="radio" value="yes" ng-model="state.for_swap" /><span class="unbold">Yes</span>
           </label>
           <label class="radio-inline">
             <input type="radio" value="no" ng-model="state.for_swap"/><span class="unbold">No</span>
