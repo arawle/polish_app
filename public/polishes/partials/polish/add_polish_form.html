@@ -1,35 +1,52 @@
-<form role="form" class="form-inline polishAddForm" name="polishForm" ng-show="addPolish">
+<form role="form" class="polishAddForm form-horizontal" name="polishForm" ng-show="addPolish">
   <div class="form-group">
-    <label for="brand">Brand:</label>
-    <input type="text" class="form-control" ng-model="polish.brand" required/>
+    <label for="brand" class="control-label col-xs-2">Brand:</label>
+    <div class="col-xs-4">
+      <input type="text" class="form-control" ng-model="polish.brand" required/>
+    </div>
   </div>
   <div class="form-group">
-    <label for="collection">Collection:</label>
-    <input type="text" class="form-control" ng-model="polish.collection" />
+    <label for="collection" class="control-label col-xs-2">Collection:</label>
+    <div class="col-xs-4">
+      <input type="text" class="form-control" ng-model="polish.collection" />
+    </div>
   </div>
   <div class="form-group">
-    <label for="name">Name:</label>
-    <input type="text" class="form-control" ng-model="polish.name" required/>
+    <label for="name" class="control-label col-xs-2">Name:</label>
+    <div class="col-xs-4">
+      <input type="text" class="form-control" ng-model="polish.name" required/>
+    </div>
   </div>
   <div class="form-group">
-    <label for="releaseYear">Release Year:</label>
-    <input type="text" class="form-control" ng-model="polish.releaseYear">
+    <label for="releaseYear" class="control-label col-xs-2">Release Year:</label>
+    <div class="col-xs-4">
+      <input type="text" class="form-control" ng-model="polish.releaseYear">
+    </div>
   </div>
   <div class="form-group">
-    <label for="code">Barcode/Stock Code:</label>
-    <input type="text" class="form-control" ng-model="polish.code"/>
+    <label for="code" class="control-label col-xs-2">Barcode/Stock Code:</label>
+    <div class="col-xs-4">
+      <input type="text" class="form-control" ng-model="polish.code"/>
+    </div>
   </div>
   <div class="form-group">
-    <label for="finish">Finish:</label>
-    <input type="text" class="form-control" ng-model="polish.finish" required/>
+    <label for="finish" class="control-label col-xs-2">Finish:</label>
+    <div class="col-xs-4">
+      <input type="text" class="form-control" ng-model="polish.finish" required/>
+    </div>
   </div>
   <div class="form-group">
-    <label for="color">Color:</label>
-    <input type="text" class="form-control" ng-model="polish.color" required/>
+    <label for="color" class="control-label col-xs-2">Color:</label>
+    <div class="col-xs-4">
+      <input type="text" class="form-control" ng-model="polish.color" required/>
+    </div>
   </div>
   <div class="form-group">
-    <input type="file" ngf-select ng-model="polish.picture"/>
+    <div class="col-xs-offset-2 col-xs-4">
+      <input type="file" ngf-select ng-model="polish.picture"/>
+    </div>
   </div>
-  <br/>
-  <button class="btn btn-default" type="submit" ng-click="add(polish); addPolish = ! addPolish">Add Polish</button>
+  <div class="col-xs-offset-2 col-xs-4">
+    <button class="btn btn-default" type="submit" ng-click="add(polish); addPolish = ! addPolish">Add Polish</button>
+  </div>
 </form>
