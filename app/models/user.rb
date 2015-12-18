@@ -6,4 +6,6 @@ class User < ActiveRecord::Base
 
   has_many :states, dependent: :destroy
 
+  has_many :collections, dependent: :destroy
+  has_many :polishes, through: :collections
 end
