@@ -11,7 +11,7 @@ class StatesController < ApplicationController
   end
 
   def create
-    @state = CreateState.new(params[:state]).run
+    @state = CreateState.new(params[:state].merge(user_id: current_user.id)).run
     @state.polish = Polish.find(params[:polish_id])
 
     if @state.save

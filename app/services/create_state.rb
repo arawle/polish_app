@@ -14,7 +14,8 @@ class CreateState
       :purchase_price,
       :size,
       :picture,
-      :bottleshot
+      :bottleshot,
+      :user_id
     )
   end
 
