@@ -25,8 +25,6 @@ class StatesController < ApplicationController
     else
       render json: @state.errors, status: :unprocessable_entity
     end
-
-
   end
 
   def update

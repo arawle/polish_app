@@ -2,18 +2,15 @@ class PolishesController < ApplicationController
   before_action :set_polish, only: [:show, :update, :destroy]
   before_filter :authenticate_user!, only: [:create, :update, :destroy]
 
-  #GET /polishes
   def index
     @polishes = Polish.all
     render json: @polishes, status: :ok
   end
 
-  #GET /polishes/:id
   def show
     render json: @polish, status: :ok
   end
 
-  #POST /polishes
   def create
     @polish = Polish.new(polish_params)
     if @polish.save
@@ -26,7 +23,6 @@ class PolishesController < ApplicationController
     end
   end
 
-  #PATCH/PUT /polishes/:id (only admins can edit a polish)
   def update
     if @polish.update(polish_params)
       render json: @polish, status: :ok
@@ -35,7 +31,6 @@ class PolishesController < ApplicationController
     end
   end
 
-  #DELETE /polishes/:id (only admins can delete polishes)
   def destroy
     @polish.destroy
     render json: @polish, status: :ok
