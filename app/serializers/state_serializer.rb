@@ -17,6 +17,7 @@ class StateSerializer < ActiveModel::Serializer
     for_sale
     for_swap
     id
+    user_id
   )
 
   def size

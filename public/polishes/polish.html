@@ -59,8 +59,10 @@
           <span ng-show="state.for_swap == null">No</span>
         <br/>
       </span>
-      <button class="btn btn-warning btn-xs" ng-click="editState = ! editState">Edit</button>
-      <button class="btn btn-danger btn-xs" ng-click="deletePolishState(polish.id, state)">Delete</button>
+      <span ng-if="state.user_id == user.id">
+        <button class="btn btn-warning btn-xs" ng-click="editState = ! editState">Edit</button>
+        <button class="btn btn-danger btn-xs" ng-click="deletePolishState(polish.id, state)">Delete</button>
+      </span>
     </div>
     <div ng-include src="'polishes/partials/state/edit_state_form.html'"></div>
   </div>
