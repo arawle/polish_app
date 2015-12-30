@@ -31,7 +31,9 @@
         <br/>
       </span>
       <button class="btn btn-info btn-xs" ng-click="show(polish)">Show</button>
-      <button class="btn btn-danger btn-xs" ng-click="delete(polish)">Delete</button>
+      <span ng-if="user.admin">
+        <button class="btn btn-danger btn-xs" ng-click="delete(polish)">Delete</button>
+      </span>
     </div>
   </div>
 </div>

@@ -2,7 +2,7 @@
   <div class="row pageTopper">
     <div class="col-lg-8">
       <span class="pageHeader">{{polish.brand}}: {{polish.name}}
-        <span ng-if="user.admin != null">
+        <span ng-if="user.admin">
           <button class="btn btn-warning btn-xs" ng-click="editPolish = ! editPolish">Edit Polish</button>
           <button class="btn btn-danger btn-xs" ng-click="deletePolish(polish)">Delete</button>
         </span>
