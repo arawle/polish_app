@@ -2,8 +2,10 @@
   <div class="row pageTopper">
     <div class="col-lg-8">
       <span class="pageHeader">{{polish.brand}}: {{polish.name}}
-      <button class="btn btn-warning btn-xs" ng-click="editPolish = ! editPolish">Edit Polish</button>
-      <button class="btn btn-danger btn-xs" ng-click="deletePolish(polish)">Delete</button>
+        <span ng-if="user.admin != null">
+          <button class="btn btn-warning btn-xs" ng-click="editPolish = ! editPolish">Edit Polish</button>
+          <button class="btn btn-danger btn-xs" ng-click="deletePolish(polish)">Delete</button>
+        </span>
       </span>
     </div>
     <div class="col-lg-2 col-lg-offset-1 pageTopSmall">
