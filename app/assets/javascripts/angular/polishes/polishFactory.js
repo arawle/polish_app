@@ -22,7 +22,6 @@
       $http.get(polish)
       .success(function(data){
         PolishFactory.polish.push(data);
-        console.log(PolishFactory.polish)
       })
       .error(function(data){
         console.log('Error: ' + data);
@@ -41,7 +40,6 @@
     };
 
     function sendState(formData, method, url){
-      console.log(formData)
       var deferred = $q.defer();
       Upload.upload({
         url: url,

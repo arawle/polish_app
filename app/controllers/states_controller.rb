@@ -11,21 +11,22 @@ class StatesController < ApplicationController
   end
 
   def create
-    puts params
     @state = CreateState.new(params[:state].merge(user_id: current_user.id)).run
     @state.polish = Polish.find(params[:polish_id])
 
     @user = User.find(current_user.id)
 
     @user.polishes << @state.polish
-    collection = @user.polishes.find(params[:polish_id])
-    collection.save
+    @collection = @user.polishes.find(params[:polish_id])
+    @collection.save
 
     if @state.save
       render json: @state, status: :created
     else
       render json: @state.errors, status: :unprocessable_entity
     end
+
+
   end
 
   def update

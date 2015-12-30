@@ -36,7 +36,6 @@
 
     $scope.login = function() {
       Auth.login($scope.user).then(function(){
-        console.log($scope.user)
         $location.path( "/polishes" );
       });
     };

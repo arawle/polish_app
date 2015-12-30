@@ -29,7 +29,6 @@
     };
 
     $scope.addPolishState = function (polishId, state){
-      console.log(state)
       var newObject = {state: state};
       PolishFactory.createStateWithAttachment(polishId, newObject).then(function(data) {
         console.log('success');
