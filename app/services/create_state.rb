@@ -1,5 +1,7 @@
 class CreateState
   def initialize(params)
+    puts params
+
     @params = params
 
     @permitted = params.permit(
@@ -15,7 +17,7 @@ class CreateState
       :size,
       :picture,
       :bottleshot,
-      :user_id
+      :user_id,
     )
   end
 
