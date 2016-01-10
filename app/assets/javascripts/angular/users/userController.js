@@ -13,7 +13,6 @@
   ];
 
   function userController($scope, $location, $routeParams, Auth){
-
     $scope.user;
 
     Auth.currentUser().then(function (user){
