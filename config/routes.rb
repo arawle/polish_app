@@ -4,10 +4,10 @@ Rails.application.routes.draw do
 
   devise_for :users, :controllers => {sessions: 'sessions'}
 
+  resources :users, only: [:show]
+
   resources :polishes,  only: [:index, :show, :create, :update, :destroy] do
     resources :states, only: [:index, :show, :create, :update, :destroy]
   end
-
-  resources :user, only: [:show]
 
 end

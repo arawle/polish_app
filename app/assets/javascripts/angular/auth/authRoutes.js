@@ -20,6 +20,10 @@
       .when('/register', {
         templateUrl: 'auth/_register.html',
         controller: 'authController'
+      })
+      .when('/user/:id', {
+        templateUrl: 'user/profile.html',
+        controller: 'userController'
       });
     $locationProvider.html5Mode(false);
   }

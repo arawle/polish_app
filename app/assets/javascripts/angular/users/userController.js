@@ -10,10 +10,14 @@
     '$location',
     '$routeParams',
     'Auth'
-
   ];
 
   function userController($scope, $location, $routeParams, Auth){
 
+    $scope.user;
+
+    Auth.currentUser().then(function (user){
+      return $scope.user = user;
+    });
   }
 })();
