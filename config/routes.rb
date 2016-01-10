@@ -7,4 +7,7 @@ Rails.application.routes.draw do
   resources :polishes,  only: [:index, :show, :create, :update, :destroy] do
     resources :states, only: [:index, :show, :create, :update, :destroy]
   end
+
+  resources :user, only: [:show]
+
 end
