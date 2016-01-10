@@ -5,11 +5,11 @@ app.directive('stringToNumber', function() {
     require: 'ngModel',
     link: function(scope, element, attr, ngModel) {
       function toModel(value) {
-        return "" + value; // convert to string
+        return "" + value;
       }
 
       function toView(value) {
-        return parseInt(value); // convert to number
+        return parseInt(value);
       }
       ngModel.$formatters.push(toView);
       ngModel.$parsers.push(toModel);
