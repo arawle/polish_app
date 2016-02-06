@@ -20,7 +20,5 @@
     Auth.currentUser().then(function (user){
       return $scope.user = user;
     });
-
-
   }
 })();
