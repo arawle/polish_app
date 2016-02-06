@@ -6,14 +6,13 @@
   </div>
 </div>
 
-{{collection}}
-
 <div class="row placeholders">
-  <div ng-repeat="polish in collection | filter: searchPolish" >
+  <div ng-repeat="polish in collection[0] | filter: searchPolish" >
     <div class="col-xs-6 col-sm-3 placeholder">
       <h4>{{polish.name}}</h4>
       <img ng-src="{{polish.url}}" class="img-responsive" alt="thumbnail">
       <br/>
+      {{name}}
       <span class="text-muted">
         Brand: {{polish.brand}}
         <br/>
