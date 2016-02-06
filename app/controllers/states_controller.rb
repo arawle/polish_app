@@ -40,6 +40,11 @@ class StatesController < ApplicationController
   def destroy
     @state = State.find(params[:id])
     @state.destroy
+
+    @user = User.find(current_user.id)
+    @collection = @user.polishes.find(params[:polish_id])
+    @collection.destroy
+
     render json: @state, status: :ok
   end
 end
