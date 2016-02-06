@@ -1,28 +1,29 @@
-== README
+== Polish App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Summary
+* Post and track your polish collection in a user interactive site. There is currently no site which does this for nail polish collectors, and I have found many who have interest in using this type of technology. This has implications for being translatable to other types of collections such as baseball cards, records, cosmetics.
 
-Things you may want to cover:
+* An individual user can keep track of their entire nail polish collection. Users can mark polishes as for sale or for swap. There will be features implemented for both the casual enthusiast as well as bloggers.
 
-* Ruby version
+* Bloggers will have additional options to keep track of what polishes they’ve blogged about, as well as adding a blog photo of the post and a link to the post.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Users can add what they paid for a polish. This will allow for data visualization for individual polishes based on current and paid prices.
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Current Technologies
+* Angular
+* Javascript
+* Ruby on Rails
+* PostreSQL
+* Bootstrap
+* Devise
+
+APIs
+* AWS S3
+
+Gems
+* Paperclip
+* Multiple Angular/Rails/Devise integration Gems
+
+Planned Additions
+* Chartkick
