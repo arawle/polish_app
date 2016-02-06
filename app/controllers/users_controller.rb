@@ -3,7 +3,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @collection = Collection.find_by user_id: current_user.id
+    @collection = Collection.where user_id: current_user.id
 
     render json: @collection, status: :ok
   end
